@@ -11,5 +11,44 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+#取得商品一级分类
+GET     /topclass                               Catalog.topclass
+
+#取得一级分类的常用分类
+GET     /topeasycls                             Catalog.topeasyclass
+
+#取得二级分类和三级分类--异步加载页面
+GET     /syclass                                Catalog.syclass
+
+#分类详情
+GET     /product                                Product.detail
+
+#商品详情
+GET     /item                                   Item.detail
+
+#取得首页的推荐商品
+GET     /h_tj_p                                 Home.tjproduct
+
+#取得首页的热卖商品
+GET     /h_rm_p                                 Home.rmproduct
+
+#取得首页的最新上架商品
+GET     /h_new_p                                Home.newproduct
+
+#取得首页的折扣商品
+GET     /h_zk_p                                 Home.zkproduct
+
+#NF热搜词
+GET     /h_f_hsw                                Home.floorhotword
+
+#NF推荐品牌
+GET     /h_f_tjpp                               Home.floortjbrand
+
+#NF推荐分类
+GET     /h_f_tjfl                               Home.floortjclass
+
+#管理员功能
+
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
