@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -12,7 +13,7 @@ import play.db.jpa.GenericModel;
 public class PohPack extends GenericModel {
 
     // Fields
-
+    @Id
     public Short packId;
     public String packName;
     public String packImg;

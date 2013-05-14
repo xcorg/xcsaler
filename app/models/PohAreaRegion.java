@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -11,6 +12,7 @@ import play.db.jpa.GenericModel;
 public class PohAreaRegion extends GenericModel {
 
     // Fields
+    @Id
     public Short shippingAreaId;
     public Short regionId;
 

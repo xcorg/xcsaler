@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -15,7 +16,7 @@ import play.db.jpa.GenericModel;
 public class PohUsers extends GenericModel {
 
     // Fields
-
+    @Id
     public Integer userId;
     public String email;
     public String userName;

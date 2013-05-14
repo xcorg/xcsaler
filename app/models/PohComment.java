@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -12,7 +13,7 @@ import play.db.jpa.GenericModel;
 public class PohComment extends GenericModel {
 
     // Fields
-
+    @Id
     public Integer commentId;
     public Short commentType;
     public Integer idValue;

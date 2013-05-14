@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -12,6 +13,7 @@ import play.db.jpa.GenericModel;
 public class PohAdminAction extends GenericModel {
 
     // Fields
+    @Id
     public Short actionId;
     public Short parentId;
     public String actionCode;

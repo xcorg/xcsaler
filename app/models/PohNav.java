@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -12,6 +13,7 @@ import play.db.jpa.GenericModel;
 public class PohNav extends GenericModel {
 
     // Fields
+    @Id
     public Integer id;
     public String ctype;
     public Short cid;

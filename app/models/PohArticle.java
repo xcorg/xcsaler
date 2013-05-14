@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -12,7 +13,7 @@ import play.db.jpa.GenericModel;
 public class PohArticle extends GenericModel {
 
     // Fields
-
+    @Id
     public Integer articleId;
     public Short catId;
     public String title;

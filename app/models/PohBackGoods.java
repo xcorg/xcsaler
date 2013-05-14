@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import play.db.jpa.GenericModel;
 
@@ -12,7 +13,7 @@ import play.db.jpa.GenericModel;
 public class PohBackGoods extends GenericModel {
 
     // Fields
-
+    @Id
     public Integer recId;
     public Integer backId;
     public Integer goodsId;
