@@ -4,6 +4,10 @@ import play.mvc.Controller;
 
 public class Home extends Controller {
 
+    public static void index() {
+
+    }
+
     /**
      * 取得首页的推荐商品
      */
