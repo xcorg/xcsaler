@@ -1,14 +1,12 @@
 package controllers;
 
-import java.util.Date;
-
-import models.Administrator;
-import models.Auth;
-import models.Company;
-import models.ForgetPass;
 import models.IUser;
 import models.IUser.UserType;
-import models.User;
+import models.PohAdmin;
+import models.PohAuth;
+import models.PohCompany;
+import models.PohForgetPass;
+import models.PohUsers;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -31,7 +29,6 @@ public class Security extends Secure.Security {
         try {
             IndexDispacher.index();
         } catch (Throwable e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         // try {
@@ -63,24 +60,24 @@ public class Security extends Secure.Security {
 
         if (user.passwordMatches(password)) {
             session.put("loginType", user.getType());
-            if (loginType().equals(UserType.Administrator)) {
+            if (loginType().equals(UserType.Admin)) {
                 flash.put("url", Router.getFullUrl("Administrator.index"));
             }
             if (loginType().equals(UserType.Company)) {
                 flash.put("url", Router.getFullUrl("Company.index"));
-                Company company = (Company) user;
-                accountActivate(company);
-                accountOverdue(company.endDate);
+                //PohCompany company = (PohCompany) user;
+                // accountActivate(company);
+                // accountOverdue(company.endDate);
             }
             if (loginType().equals(UserType.User)) {
-                User u = (User) user;
+                //User u = (User) user;
 
                 if (flash.get("url") == null) {
                     flash.put("url", Router.getFullUrl("Home.index"));
                 }
 
-                accountActivate(u.company);
-                accountOverdue(u.company.endDate);
+                // accountActivate(u.company);
+                // accountOverdue(u.company.endDate);
 
                 // 通过nginx反向代理取远程访问用户真实的ip地址
                 Header header = request.headers.get("x-real-ip");
@@ -100,26 +97,26 @@ public class Security extends Secure.Security {
 
     }
 
-    static void accountOverdue(Date compareDate) {
-        Date date = new Date();
-        if (!compareDate.after(date)) {
-            flash.error("账号已过期");
-            try {
-                Secure.login();
-            } catch (Throwable e) {
-            }
-        }
-    }
+    // static void accountOverdue(Date compareDate) {
+    // Date date = new Date();
+    // if (!compareDate.after(date)) {
+    // flash.error("账号已过期");
+    // try {
+    // Secure.login();
+    // } catch (Throwable e) {
+    // }
+    // }
+    // }
 
-    static void accountActivate(Company company) {
-        if (!company.activation) {
-            flash.error("账号未被激活");
-            try {
-                Secure.login();
-            } catch (Throwable e) {
-            }
-        }
-    }
+    // static void accountActivate(PohCompany company) {
+    // if (!company.activation) {
+    // flash.error("账号未被激活");
+    // try {
+    // Secure.login();
+    // } catch (Throwable e) {
+    // }
+    // }
+    // }
 
     static void onDisconnect() {
         if (isConnected()) {
@@ -130,12 +127,12 @@ public class Security extends Secure.Security {
 
     static IUser getUser(String username) {
         IUser user = null;
-        user = Administrator.get(username);
+        user = PohAdmin.get(username);
         if (user == null) {
-            user = Company.get(username);
+            user = PohCompany.get(username);
         }
         if (user == null) {
-            user = User.get(username);
+            user = PohUsers.get(username);
         }
         return user;
     }
@@ -170,8 +167,8 @@ public class Security extends Secure.Security {
         if (!isUser())
             return false; // 如果不是User，不判断Role和Auth权限，直接返回false
         String username = Security.connected();
-        User user = User.get(username);
-        return Auth.check(user, profile);
+        PohUsers user = PohUsers.get(username);
+        return PohAuth.check(user, profile);
 
     }
 
@@ -179,8 +176,8 @@ public class Security extends Secure.Security {
         return loginType() == UserType.User;
     }
 
-    public static boolean isAdministrator() {
-        return loginType() == UserType.Administrator;
+    public static boolean isAdmin() {
+        return loginType() == UserType.Admin;
     }
 
     public static boolean isCompany() {
@@ -208,12 +205,10 @@ public class Security extends Secure.Security {
             type = "1";
         } else if (type.equals("us")) {
             type = "0";
-        } else if (type.equals("ukey")) {
-            type = "2";
-            passHtml = "/Secure/passukey.html";
-        }
+        } 
+        
         Long time = System.currentTimeMillis();
-        ForgetPass person = ForgetPass.find("type=? and token=?", Integer.valueOf(type), token).first();
+        PohForgetPass person = PohForgetPass.find("type=? and token=?", Integer.valueOf(type), token).first();
         String username = person.username;
         String email = person.email;
 
@@ -233,7 +228,4 @@ public class Security extends Secure.Security {
         }
     }
 
-    public static void sigView() {
-        renderTemplate("/Secure/sigView.html");
-    }
 }

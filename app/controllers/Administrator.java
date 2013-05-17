@@ -3,14 +3,14 @@ package controllers;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
-import models.Company;
-import models.FeedBack;
 import models.IUser;
-import models.Notice;
-import models.User;
+import models.PohAdmin;
+import models.PohCompany;
+import models.PohFeedback;
+import models.PohNotice;
+import models.PohUsers;
 import net.sf.json.JSONObject;
 import play.mvc.Before;
 import play.mvc.Controller;
@@ -20,7 +20,7 @@ import utils.DateUtil;
 import utils.UploadUtil;
 
 @With(Secure.class)
-@Check("Administrator")
+@Check("Admin")
 public class Administrator extends Controller {
 
     @Before
@@ -61,7 +61,7 @@ public class Administrator extends Controller {
      *            旧密码 new_password新密码
      */
     public static void savePersonalPassword(String password, String new_password) {
-        Boolean b = models.Administrator.updatePassword(password, new_password);
+        Boolean b = PohAdmin.updatePassword(password, new_password);
         render(Constants._INDEX, b);
     }
 
@@ -69,7 +69,7 @@ public class Administrator extends Controller {
      * 商家列表
      */
     public static void companySee() {
-        List<Company> accounts = Company.see();
+        List<Company> accounts = PohCompany.see();
         render(accounts);
     }
 
@@ -103,7 +103,7 @@ public class Administrator extends Controller {
         if (!rowSelf.equals("")) {
             rows = Integer.parseInt(rowSelf);
         }
-        JSONObject json = FeedBack.getAllFeedBack(page, rows, search);
+        JSONObject json = PohFeedback.getAllFeedBack(page, rows, search);
         renderJSON(json);
 
     }
@@ -117,7 +117,7 @@ public class Administrator extends Controller {
      *            每页显示的条数
      */
     public static void feedbackDetailTables(Integer page, String search, String tableLength) {
-        JSONObject mapRe = FeedBack.getAllFeedBackAn(page, search, tableLength);
+        JSONObject mapRe = PohFeedback.getAllFeedBackAn(page, search, tableLength);
         renderJSON(mapRe);
     }
 
@@ -126,7 +126,7 @@ public class Administrator extends Controller {
      * @param id
      */
     public static void deleFeeBack(String id) {
-        models.FeedBack.deleFeedBack(id);
+        PohFeedback.deleFeedBack(id);
     }
 
     /**
@@ -138,13 +138,13 @@ public class Administrator extends Controller {
      *            每页显示的条数
      */
     public static void deleFeeBackAn(String id, Integer page, String search, String tableLength) {
-        models.FeedBack.deleFeedBack(id);
-        int pageCount = FeedBack.getPageCount(page, search, tableLength);// 本页的数据个数
+        PohFeedback.deleFeedBack(id);
+        int pageCount = PohFeedback.getPageCount(page, search, tableLength);// 本页的数据个数
         // 不是第一页且删除前本页只有一条数据时，删除后返回前一页
         if (page != 1 && pageCount == 0) {
             page = page - 1;
         }
-        JSONObject mapRe = FeedBack.getAllFeedBackAn(page, search, tableLength);
+        JSONObject mapRe = PohFeedback.getAllFeedBackAn(page, search, tableLength);
         renderJSON(mapRe);
     }
 
@@ -153,7 +153,7 @@ public class Administrator extends Controller {
      */
     public static void editFeedBack(Long id, String answer) {
         // System.out.println("id:" +id +"  "+"answer:" +answer);
-        models.FeedBack.editFeedBack(id, answer);
+        PohFeedback.editFeedBack(id, answer);
     }
 
     /**
@@ -167,8 +167,8 @@ public class Administrator extends Controller {
      *            每页显示的条数
      */
     public static void editFeedBackAn(Long id, String answer, Integer page, String search, String tableLength) {
-        models.FeedBack.editFeedBack(id, answer);
-        JSONObject mapRe = FeedBack.getAllFeedBackAn(page, search, tableLength);
+        PohFeedback.editFeedBack(id, answer);
+        JSONObject mapRe = PohFeedback.getAllFeedBackAn(page, search, tableLength);
         renderJSON(mapRe);
     }
 
@@ -177,14 +177,14 @@ public class Administrator extends Controller {
      * 
      * @param companyId
      */
-    public static void companyAdd(Company account) {
-        Calendar cal = Calendar.getInstance();// 结束日期的时间修正为当天的23:59:59
-        cal.setTime(account.endDate);
-        cal.set(Calendar.HOUR_OF_DAY, 23);
-        cal.set(Calendar.MINUTE, 59);
-        cal.set(Calendar.SECOND, 59);
-        account.endDate = cal.getTime();
-        Company.Add(account);
+    public static void companyAdd(PohCompany account) {
+//        Calendar cal = Calendar.getInstance();// 结束日期的时间修正为当天的23:59:59
+//        cal.setTime(account.endDate);
+//        cal.set(Calendar.HOUR_OF_DAY, 23);
+//        cal.set(Calendar.MINUTE, 59);
+//        cal.set(Calendar.SECOND, 59);
+//        account.endDate = cal.getTime();
+        PohCompany.Add(account);
         index();
     }
 
@@ -193,7 +193,7 @@ public class Administrator extends Controller {
      */
     public static void companyInitUpdate(String companyId) {
         String token = UploadUtil.getToken();
-        Company account = Company.initUpdate(companyId);
+        PohCompany account = PohCompany.initUpdate(companyId);
         String title = "修改公司账号信息";
         // String emailBefore=account.email;
         render(account, token, title);
@@ -211,15 +211,15 @@ public class Administrator extends Controller {
     /**
      * 修改公司账号
      */
-    public static void companyUpdate(Company account) {
+    public static void companyUpdate(PohCompany account) {
 
-        Calendar cal = Calendar.getInstance();// 结束日期的时间修正为当天的23:59:59
-        cal.setTime(account.endDate);
-        cal.set(Calendar.HOUR_OF_DAY, 23);
-        cal.set(Calendar.MINUTE, 59);
-        cal.set(Calendar.SECOND, 59);
-        account.endDate = cal.getTime();
-        Company.update(account);
+//        Calendar cal = Calendar.getInstance();// 结束日期的时间修正为当天的23:59:59
+//        cal.setTime(account.endDate);
+//        cal.set(Calendar.HOUR_OF_DAY, 23);
+//        cal.set(Calendar.MINUTE, 59);
+//        cal.set(Calendar.SECOND, 59);
+//        account.endDate = cal.getTime();
+        PohCompany.update(account);
         index();
     }
 
@@ -227,7 +227,7 @@ public class Administrator extends Controller {
      * 删除公司账号
      */
     public static void companyDelete(String companyId) {
-        Company.delete(companyId);
+        PohCompany.delete(companyId);
         index();
     }
 
@@ -240,7 +240,7 @@ public class Administrator extends Controller {
      */
     public static boolean companyIsExist(String username, String id) {
         // false 表示已经存在
-        boolean b = User.isExist(username, id);
+        boolean b = PohUsers.isExist(username, id);
         return b;
     }
 
@@ -253,7 +253,7 @@ public class Administrator extends Controller {
      */
     public static boolean emailIsExist(String email, String id) {
         // false 表示已经存在
-        boolean b = User.isemailExist(email, id);
+        boolean b = PohUsers.isEmailExist(email, id);
         return b;
     }
 
@@ -262,7 +262,7 @@ public class Administrator extends Controller {
      */
     public static void noticeSee() {
         // SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        List<Notice> notices = Notice.see();
+        List<PohNotice> notices = PohNotice.see();
         // for(Notice notice:notices){
         // notice.showTime = formatter.format(notice.noTime);
         // }
@@ -273,7 +273,7 @@ public class Administrator extends Controller {
      * 系统公告
      */
     public static void sysNoticeSee() {
-        models.Notice sysNotice = models.Notice.systemNotices();
+        PohNotice sysNotice = PohNotice.systemNotices();
 
         String token = UploadUtil.getToken();
 
@@ -306,12 +306,12 @@ public class Administrator extends Controller {
      * 
      * @param
      */
-    public static void noticeAdd(Notice notice) {
+    public static void noticeAdd(PohNotice notice) {
         notice.type = "0";
 
         notice.startTime = DateUtil.String2Date(notice.startTimes);
         // notice.endTime = DateUtil.String2Date(notice.endTimes);
-        boolean isSuccess = Notice.add(notice);
+        boolean isSuccess = PohNotice.add(notice);
         // noticeSee();
         // return str;
         renderText(isSuccess);
@@ -322,10 +322,10 @@ public class Administrator extends Controller {
      * 
      * @param
      */
-    public static void sysNoticeAdd(Notice notice) {
+    public static void sysNoticeAdd(PohNotice notice) {
         notice.type = "1";
 
-        models.Notice sysNotice = models.Notice.systemNotices();
+        PohNotice sysNotice = PohNotice.systemNotices();
         if (sysNotice != null) {
             sysNotice.title = notice.title;
             sysNotice.content = notice.content;
@@ -346,24 +346,24 @@ public class Administrator extends Controller {
         } else {
             sysNotice = notice;
         }
-        boolean isSuccess = Notice.add(sysNotice);
+        boolean isSuccess = PohNotice.add(sysNotice);
         renderText(isSuccess);
     }
 
     /**
      * 修改普通通知
      */
-    public static boolean noticeUpdate(Notice notices) {
+    public static boolean noticeUpdate(PohNotice notices) {
         notices.type = "0";
-        boolean str = Notice.update(notices);
+        boolean str = PohNotice.update(notices);
         return str;
     }
 
     /**
      * 删除通知
      */
-    public static Long noticeDel(Notice notice) {
-        Long id = Notice.delete(notice);
+    public static Long noticeDel(PohNotice notice) {
+        Long id = PohNotice.delete(notice);
         return id;
     }
 
@@ -376,7 +376,7 @@ public class Administrator extends Controller {
      */
     public static boolean noticeIsExist(String title, String id) {
         // false 表示已经存在
-        boolean b = Notice.isnoticeExist(title, id);
+        boolean b = PohNotice.isnoticeExist(title, id);
         return b;
     }
 
@@ -387,7 +387,7 @@ public class Administrator extends Controller {
      * @since 2013-4-11下午05:14:08
      */
     public static void infoclass() {
-        // JSONObject mapRe = models.InfoClassManager.getClassJson();
+        // JSONObject mapRe = PohInfoClassManager.getClassJson();
         render();
     }
 

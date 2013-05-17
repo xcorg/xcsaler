@@ -9,16 +9,17 @@ public class IndexDispacher extends Controller {
             if (!Security.isConnected()) {
                 Secure.login();
             }
+            
             UserType loginType = Security.loginType();
             switch (loginType) {
-            case NOT_LOGGED_IN:
-                Secure.logout();
-            case Administrator:
-                Administrator.index();
-            case Company:
-                Company.index();
-            case User:
-                Home.index();
+                case NOT_LOGGED_IN:
+                    Secure.logout();
+                case Admin:
+                    Administrator.index();
+                case Company:
+                    Company.index();
+                case User:
+                    Home.index();
             }
         } catch (Throwable e) {
 

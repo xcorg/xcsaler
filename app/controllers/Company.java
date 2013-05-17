@@ -1,17 +1,14 @@
 package controllers;
 
-import java.util.List;
-
-import models.Auth;
 import models.IUser;
-import models.Role;
-import models.Role_Auth;
-import models.User;
+import models.PohCompany;
+import models.PohRole;
+import models.PohRoleAuth;
+import models.PohUsers;
 import play.mvc.Before;
 import play.mvc.Controller;
 import play.mvc.With;
 import utils.Constants;
-import utils.UploadUtil;
 
 @With(Secure.class)
 @Check("Company")
@@ -50,7 +47,7 @@ public class Company extends Controller {
      *            旧密码 new_password新密码
      */
     public static void savePersonalPassword(String password, String new_password) {
-        Boolean b = models.Company.updatePassword(password, new_password);
+        Boolean b = PohCompany.updatePassword(password, new_password);
         render("@index", b);
     }
 
@@ -62,10 +59,12 @@ public class Company extends Controller {
      * 添加用户页面
      */
     public static void userInitAdd() {
-        models.Company company = User.initAdd();
-        List<Role> roleSee = company.roles;
-        String token = UploadUtil.getToken();
-        render(roleSee, token, company);
+//        PohCompany company = PohUsers.initAdd();
+//        List<PohRole> roleSee = company.roles;
+//        String token = UploadUtil.getToken();
+//        render(roleSee, token, company);
+        
+        render();
     }
 
     public static void ukeySuperPwdSee() {
@@ -79,7 +78,7 @@ public class Company extends Controller {
      * @return
      */
     public static boolean userIsExist(String username, String id) {
-        boolean b = models.User.isExist(username, id);
+        boolean b = PohUsers.isExist(username, id);
         return b;
     }
 
@@ -90,47 +89,50 @@ public class Company extends Controller {
      * @return
      */
     public static boolean emailIsExist(String email, String id) {
-        boolean b = models.User.isemailExist(email, id);
+        boolean b = PohUsers.isEmailExist(email, id);
         return b;
     }
 
     /**
      * 修改用户页面
      */
-    public static void userInitUpdate(User user) {
-        models.Company company = User.initAdd();
-        User init = User.initUpdate(user);
-        List<Role> roleSee = init.company.roles;
-        List<String> roleNames = init.roleNames();
-
-        String token = UploadUtil.getToken();
-        // String emailBefore=init.email;
-        render(init, roleSee, roleNames, token, company);
+    public static void userInitUpdate(PohUsers user) {
+//        PohCompany company = User.initAdd();
+//        User init = User.initUpdate(user);
+//        List<PohRole> roleSee = init.company.roles;
+//        List<String> roleNames = init.roleNames();
+//
+//        String token = UploadUtil.getToken();
+//        // String emailBefore=init.email;
+//        render(init, roleSee, roleNames, token, company);
+        
+        render();
     }
 
     /**
      * 角色列表
      */
     public static void roleSee() {
-        List roleSee = Role.roleSee();
-        List<Auth> authSee = Auth.authSee();
-        render(roleSee, authSee);
+//        List roleSee = PohRole.roleSee();
+//        List<PohAuth> authSee = PohAuth.authSee();
+//        render(roleSee, authSee);
+        render();
     }
 
     /**
      * 添加角色
      */
     public static Long roleAdd(String name) {
-        Long id = Role.roleAdd(name);
+        Long id = PohRole.roleAdd(name);
         return id;
     }
 
     /**
      * 删除角色
      */
-    public static Long roleDel(Role role) {
+    public static Long roleDel(PohRole role) {
         Long roleId = role.id;
-        boolean sign = Role.delete(role);
+        boolean sign = PohRole.delete(role);
         return roleId;
     }
 
@@ -139,23 +141,23 @@ public class Company extends Controller {
      * 
      * @return
      */
-    public static String roleUpdate(Role role) {
-        String json = Role.update(role);
+    public static String roleUpdate(PohRole role) {
+        String json = PohRole.update(role);
         return json;
     }
 
     /**
      * 添加权限
      */
-    public static void authAdd(Role_Auth roleAuth) {
-        Role_Auth.add(roleAuth);
+    public static void authAdd(PohRoleAuth roleAuth) {
+        PohRoleAuth.add(roleAuth);
     }
 
     /**
      * 删除权限
      */
-    public static void authDel(Role_Auth roleAuth) {
-        Role_Auth.delete(roleAuth);
+    public static void authDel(PohRoleAuth roleAuth) {
+        PohRoleAuth.delete(roleAuth);
     }
 
 }
