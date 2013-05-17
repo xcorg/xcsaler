@@ -14,7 +14,7 @@ public class PohAdminUser extends GenericModel {
 
     // Fields
     @Id
-    public Short userId;
+    public Long userId;
     public String userName;
     public String email;
     public String password;

@@ -16,7 +16,7 @@ public class PohUserAddress extends GenericModel {
     @Id
     public Integer addressId;
     public String addressName;
-    public Integer userId;
+    public Long userId;
     public String consignee;
     public String email;
     public Short country;

@@ -25,6 +25,6 @@ public class PohComment extends GenericModel {
     public String ipAddress;
     public Short status;
     public Integer parentId;
-    public Integer userId;
+    public Long userId;
 
 }

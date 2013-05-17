@@ -16,7 +16,7 @@ public class PohOrderInfo extends GenericModel {
     @Id
     public Integer orderId;
     public String orderSn;
-    public Integer userId;
+    public Long userId;
     public Boolean orderStatus;
     public Boolean shippingStatus;
     public Boolean payStatus;

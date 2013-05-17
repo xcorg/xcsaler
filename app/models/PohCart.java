@@ -15,7 +15,7 @@ public class PohCart extends GenericModel {
     // Fields
     @Id
     public Integer recId;
-    public Integer userId;
+    public Long userId;
     public String sessionId;
     public Integer goodsId;
     public String goodsSn;

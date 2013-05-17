@@ -17,7 +17,7 @@ public class PohUserBonus extends GenericModel {
     public Integer bonusId;
     public Short bonusTypeId;
     public Long bonusSn;
-    public Integer userId;
+    public Long userId;
     public Integer usedTime;
     public Integer orderId;
     public Short emailed;

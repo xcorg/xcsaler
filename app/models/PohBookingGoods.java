@@ -15,7 +15,7 @@ public class PohBookingGoods extends GenericModel {
     // Fields
     @Id
     public Integer recId;
-    public Integer userId;
+    public Long userId;
     public String email;
     public String linkMan;
     public String tel;

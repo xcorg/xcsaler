@@ -15,7 +15,7 @@ public class PohUserAccount extends GenericModel {
     // Fields
     @Id
     public Integer id;
-    public Integer userId;
+    public Long userId;
     public String adminUser;
     public Double amount;
     public Integer addTime;

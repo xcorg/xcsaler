@@ -15,7 +15,7 @@ public class PohRegExtendInfo extends GenericModel {
     // Fields
     @Id
     public Integer id;
-    public Integer userId;
+    public Long userId;
     public Integer regFieldId;
     public String content;
 

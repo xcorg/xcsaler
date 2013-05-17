@@ -15,7 +15,7 @@ public class PohAdminLog extends GenericModel {
     @Id
     public Integer logId;
     public Integer logTime;
-    public Short userId;
+    public Long userId;
     public String logInfo;
     public String ipAddress;
 

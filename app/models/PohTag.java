@@ -15,7 +15,7 @@ public class PohTag extends GenericModel {
     // Fields
     @Id
     public Integer tagId;
-    public Integer userId;
+    public Long userId;
     public Integer goodsId;
     public String tagWords;
 

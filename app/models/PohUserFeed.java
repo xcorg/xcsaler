@@ -15,7 +15,7 @@ public class PohUserFeed extends GenericModel {
     // Fields
     @Id
     public Integer feedId;
-    public Integer userId;
+    public Long userId;
     public Integer valueId;
     public Integer goodsId;
     public Boolean feedType;

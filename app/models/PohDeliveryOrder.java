@@ -22,7 +22,7 @@ public class PohDeliveryOrder extends GenericModel {
     public Integer addTime;
     public Short shippingId;
     public String shippingName;
-    public Integer userId;
+    public Long userId;
     public String actionUser;
     public String consignee;
     public String address;

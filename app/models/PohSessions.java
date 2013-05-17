@@ -16,7 +16,7 @@ public class PohSessions extends GenericModel {
     @Id
     public String sesskey;
     public Integer expiry;
-    public Integer userid;
+    public Long userId;
     public Integer adminid;
     public String ip;
     public String userName;

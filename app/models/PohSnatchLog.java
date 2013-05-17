@@ -16,7 +16,7 @@ public class PohSnatchLog extends GenericModel {
     @Id
     public Integer logId;
     public Short snatchId;
-    public Integer userId;
+    public Long userId;
     public Double bidPrice;
     public Integer bidTime;
 

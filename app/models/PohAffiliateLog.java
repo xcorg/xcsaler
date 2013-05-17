@@ -17,7 +17,7 @@ public class PohAffiliateLog extends GenericModel {
     public Integer logId;
     public Integer orderId;
     public Integer time;
-    public Integer userId;
+    public Long userId;
     public String userName;
     public Double money;
     public Integer point;

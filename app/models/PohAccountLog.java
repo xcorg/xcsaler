@@ -14,7 +14,7 @@ public class PohAccountLog extends GenericModel {
     // Fields
     @Id
     public Integer logId;
-    public Integer userId;
+    public Long userId;
     public Double userMoney;
     public Double frozenMoney;
     public Integer rankPoints;
