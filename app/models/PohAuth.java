@@ -1,11 +1,9 @@
 package models;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 
 import play.data.validation.Required;
 import play.db.jpa.Model;
@@ -25,8 +23,8 @@ public class PohAuth extends Model {
     @Column(nullable = false, unique = true)
     public String name;
 
-    @OneToMany(mappedBy = "auth")
-    public List<PohRoleAuth> rolelinks = new ArrayList<PohRoleAuth>();
+//    @OneToMany(mappedBy = "auth")
+//    public List<PohRoleAuth> rolelinks = new ArrayList<PohRoleAuth>();
 
     public PohAuth(String name) {
         this.name = name;

@@ -4,18 +4,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 
 import play.db.jpa.Model;
 
 @Entity
 public class PohUserRole extends Model {
 
-    @ManyToOne(optional = false)
-    public PohUsers user;
-
-    @ManyToOne(optional = false)
-    public PohRole role;
+    // @ManyToOne(optional = false)
+    // public PohUsers user;
+    //
+    // @ManyToOne(optional = false)
+    // public PohRole role;
 
     /**
      * 写了这么多代码，都是为了.grant(xxx).to(xxx)的语法。。。
@@ -39,7 +38,7 @@ public class PohUserRole extends Model {
             if (user != null && user.isPersistent()) {
                 for (String roleName : roleNames) {
                     PohUserRole link = new PohUserRole();
-                    link.user = user;
+                    // link.user = user;
                     // Long cid = user.company.id;
                     // link.role = PohRole.gets(roleName, cid);
                     link.save();

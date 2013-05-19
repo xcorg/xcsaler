@@ -5,9 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-
 import play.db.jpa.Model;
 
 /**
@@ -18,14 +15,14 @@ import play.db.jpa.Model;
  * @author Administrator
  * 
  */
-@Entity
+//@Entity
 public class PohRoleAuth extends Model {
 
-    @ManyToOne(optional = false)
-    public PohRole role;
+//    @ManyToOne(optional = false)
+//    public PohRole role;
 
-    @ManyToOne(optional = false)
-    public PohAuth auth;
+//    @ManyToOne(optional = false)
+//    public PohAuth auth;
 
     /**
      * 写了这么多代码，都是为了.grant(xxx).to(xxx)的语法。。。
@@ -47,13 +44,13 @@ public class PohRoleAuth extends Model {
 
         public void to(String roleName) {
             for (String authName : authNames) {
-                PohRole role = PohRole.get(roleName);
-                PohAuth auth = PohAuth.get(authName);
+//                PohRole role = PohRole.get(roleName);
+//                PohAuth auth = PohAuth.get(authName);
                 PohRoleAuth link = new PohRoleAuth();
-                link.role = role;
-                role.authlinks.add(link);
-                link.auth = auth;
-                auth.rolelinks.add(link);
+//                link.role = role;
+//                role.authlinks.add(link);
+//                link.auth = auth;
+//                auth.rolelinks.add(link);
                 link.save();
             }
         }
@@ -83,8 +80,8 @@ public class PohRoleAuth extends Model {
             List<PohRoleAuth> links = PohRoleAuth.find("role.name=? and auth.name in (?2)", roleName, list).fetch();
             System.out.println("To Delete Count:" + links.size());
             for (PohRoleAuth link : links) {
-                link.role.authlinks.remove(link);
-                link.auth.rolelinks.remove(link);
+//                link.role.authlinks.remove(link);
+//                link.auth.rolelinks.remove(link);
                 link.delete();
             }
             // TODO 将这种先查询再删除的模式改为直接删除的模式
@@ -107,10 +104,10 @@ public class PohRoleAuth extends Model {
         roleAuth.save();
     }
 
-    /**
-     * 删除权限
-     */
-    public static void delete(PohRoleAuth roleAuth) {
-        roleAuth.delete("auth_id=? and role_id=?", roleAuth.auth.id, roleAuth.role.id);
-    }
+//    /**
+//     * 删除权限
+//     */
+//    public static void delete(PohRoleAuth roleAuth) {
+//        roleAuth.delete("auth_id=? and role_id=?", roleAuth.auth.id, roleAuth.role.id);
+//    }
 }

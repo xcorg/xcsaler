@@ -14,10 +14,10 @@ public class PohRegion extends GenericModel {
 
     // Fields
     @Id
-    public Short regionId;
-    public Short parentId;
+    public Long regionId;
+    public Long parentId;
     public String regionName;
-    public Boolean regionType;
-    public Short agencyId;
+    public String regionType;
+    public Long agencyId;
 
 }

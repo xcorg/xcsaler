@@ -3,7 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+#GET     /                                       Application.index
+GET     /                                       Home.index
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
@@ -19,6 +20,9 @@ GET     /topeasycls                             Catalog.topeasyclass
 
 #取得二级分类和三级分类--异步加载页面
 GET     /syclass                                Catalog.syclass
+
+#取得全部分类--异步加载页面
+GET     /allclass                               Catalog.allclass
 
 #分类详情
 GET     /product                                Product.detail

@@ -59,11 +59,11 @@ public class Company extends Controller {
      * 添加用户页面
      */
     public static void userInitAdd() {
-//        PohCompany company = PohUsers.initAdd();
-//        List<PohRole> roleSee = company.roles;
-//        String token = UploadUtil.getToken();
-//        render(roleSee, token, company);
-        
+        // PohCompany company = PohUsers.initAdd();
+        // List<PohRole> roleSee = company.roles;
+        // String token = UploadUtil.getToken();
+        // render(roleSee, token, company);
+
         render();
     }
 
@@ -97,15 +97,15 @@ public class Company extends Controller {
      * 修改用户页面
      */
     public static void userInitUpdate(PohUsers user) {
-//        PohCompany company = User.initAdd();
-//        User init = User.initUpdate(user);
-//        List<PohRole> roleSee = init.company.roles;
-//        List<String> roleNames = init.roleNames();
-//
-//        String token = UploadUtil.getToken();
-//        // String emailBefore=init.email;
-//        render(init, roleSee, roleNames, token, company);
-        
+        // PohCompany company = User.initAdd();
+        // User init = User.initUpdate(user);
+        // List<PohRole> roleSee = init.company.roles;
+        // List<String> roleNames = init.roleNames();
+        //
+        // String token = UploadUtil.getToken();
+        // // String emailBefore=init.email;
+        // render(init, roleSee, roleNames, token, company);
+
         render();
     }
 
@@ -113,9 +113,9 @@ public class Company extends Controller {
      * 角色列表
      */
     public static void roleSee() {
-//        List roleSee = PohRole.roleSee();
-//        List<PohAuth> authSee = PohAuth.authSee();
-//        render(roleSee, authSee);
+        // List roleSee = PohRole.roleSee();
+        // List<PohAuth> authSee = PohAuth.authSee();
+        // render(roleSee, authSee);
         render();
     }
 
@@ -153,11 +153,11 @@ public class Company extends Controller {
         PohRoleAuth.add(roleAuth);
     }
 
-    /**
-     * 删除权限
-     */
-    public static void authDel(PohRoleAuth roleAuth) {
-        PohRoleAuth.delete(roleAuth);
-    }
+    // /**
+    // * 删除权限
+    // */
+    // public static void authDel(PohRoleAuth roleAuth) {
+    // PohRoleAuth.delete(roleAuth);
+    // }
 
 }

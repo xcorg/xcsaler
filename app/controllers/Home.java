@@ -1,11 +1,13 @@
 package controllers;
 
+import models.PohAppConfig;
 import play.mvc.Controller;
 
 public class Home extends Controller {
 
     public static void index() {
-
+        PohAppConfig appConfig = PohAppConfig.appConfig();
+        render(appConfig);
     }
 
     /**

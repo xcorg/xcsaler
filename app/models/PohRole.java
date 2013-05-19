@@ -1,19 +1,11 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 import net.sf.json.JSONObject;
 import play.data.validation.Required;
 import play.db.jpa.Model;
-import controllers.Company;
-import controllers.Security;
 
 /**
  * PohRole entity.
@@ -29,18 +21,18 @@ public class PohRole extends Model {
     public String actionList;
     public String roleDescribe;
 
-    @ManyToOne(optional = false)
-    public Company company;
+    // @ManyToOne(optional = false)
+    // public Company company;
 
     @Required
     @Column(nullable = false)
     public String name;
 
-    @OneToMany(mappedBy = "role", cascade = CascadeType.REMOVE)
-    public List<PohUserRole> userlinks = new ArrayList<PohUserRole>();
-
-    @OneToMany(mappedBy = "role", cascade = CascadeType.REMOVE)
-    public List<PohRoleAuth> authlinks = new ArrayList<PohRoleAuth>();
+//    @OneToMany(mappedBy = "role", cascade = CascadeType.REMOVE)
+//    public List<PohUserRole> userlinks = new ArrayList<PohUserRole>();
+//
+//    @OneToMany(mappedBy = "role", cascade = CascadeType.REMOVE)
+//    public List<PohRoleAuth> authlinks = new ArrayList<PohRoleAuth>();
 
     public PohRole(String name) {
         this.name = name;
@@ -68,18 +60,18 @@ public class PohRole extends Model {
         return role;
     }
 
-//    /**
-//     * 角色列表
-//     */
-//    public static List roleSee() {
-//        Company company = (Company) Security.currentUser();
-//        List<PohRole> roles = company.roles;
-//        return roles;
-//    }
+    // /**
+    // * 角色列表
+    // */
+    // public static List roleSee() {
+    // Company company = (Company) Security.currentUser();
+    // List<PohRole> roles = company.roles;
+    // return roles;
+    // }
 
     public static Long roleAdd(String name) {
         PohRole role = new PohRole(name);
-        role.company = (Company) Security.currentUser();
+        // role.company = (Company) Security.currentUser();
         try {
             if (role.save().isPersistent()) {
                 return role.id;
