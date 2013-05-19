@@ -1,0 +1,53 @@
+* {margin: 0;padding: 0;}
+html, body {color: #333;font-family: "宋体",serif;font-size: 12px;}
+html {display: block;}
+head {display: none;}
+body {background: #FFF;}
+body, button, input, select, textarea {font: 12px/1.5 tahoma,arial,\5b8b\4f53;}
+.simpleHeader {border-bottom: 3px solid #F18200;}
+.simpleHeader {width: 100%;}
+.simpleHeader .logo {margin: 15px auto;}
+.wrapper {width: 990px;margin: 0 auto;}
+a {text-decoration: none;outline: none;}
+a:-webkit-any-link {color: -webkit-link;text-decoration: underline;cursor: auto;}
+img {border: medium none;vertical-align: top;}
+.loginMain {overflow: hidden;}
+.wrapper {width: 990px;margin: 0 auto;}
+.welcome {position: relative;width: 620px;_width: 610px;height: 455px;text-align: center;overflow: hidden;display: table;}
+.welcome .imgCon {position: absolute;left: 0;top: 0;}
+.l {float: left;}
+.r {float: right;}
+.clearfix {zoom: 1;}
+.loginMain .login {margin-top: 50px;}
+.loginMain .login .loginBox {width: 364px;border: 1px solid #DDD;background: #F9F9F9;overflow: hidden;}
+.loginMain .login h2 {margin: 22px 25px 20px;font-size: 14px;}
+.loginMain .form {width: 322px;margin: 14px 28px 0;overflow: hidden;}
+.loginMain .form dl {clear: both;margin-bottom: 4px;padding-top: 2px;overflow: hidden;}
+.loginMain .form dl dt {float: left;padding: 3px 4px 0 0;font-size: 14px;}
+.loginMain .form dl dd {float: left;width: 250px;margin-bottom: 16px;min-height: 37px;_height: 37px;}
+.loginMain .form .uiText {width: 250px;height: 23px;line-height: 23px;}
+.loginMain .form dl dd .iptTip {position: relative;margin-top: 4px;margin-bottom: -18px;_margin-bottom: -18px;padding-left: 0;color: #D00;}
+.loginMain .form .loginSubmit dd {margin-bottom: 0;}
+.loginMain .form .loginSubmit dd {padding-left: 56px;}
+.loginMain .form dl dd {float: left;width: 250px;margin-bottom: 16px;min-height: 37px;_height: 37px;}
+.loginMain .form .loginSubmit .uiBtn {margin-right: 16px;padding-left: 30px;}
+.loginMain .form a {color: #057BD2;}
+.loginMain .form .loginSubmit dd {margin-bottom: 0;}
+.loginMain .form dl dd {float: left;width: 250px;margin-bottom: 16px;min-height: 37px;_height: 37px;}
+.clear {clear: both;display: block;height: 0;overflow: hidden;font-size: 0;}
+.loginMain .bottShadow {clear: both;width: 366px;height: 20px;margin-top: 1px;background: url(/public/images/acc_bg.png) no-repeat;}
+.iptTip .tipFalse {background-position: -40px -160px;}
+.iptTip em {position: relative;top: -1px;display: inline-block;width: 16px;height: 16px;margin-right: 6px;background: url(/public/images/com_bg.png) no-repeat 0 -160px;vertical-align: middle;}
+.iptTip {padding-left: 1em;line-height: 22px;vertical-align: middle;overflow: hidden;}
+.uiText {width: 170px;height: 20px;padding: 2px;border: 1px solid #BFBFBF;background: url(/public/images/text_bg.png) no-repeat;color: #333;line-height: 20px;}
+input {vertical-align: middle;}
+em, i {font-style: normal;}
+strong, b {font-weight: bold;}
+.uiBtn:hover,.uiBtn:hover span {background-position:left -40px;	text-decoration:none;}
+.uiBtn:hover span {background-position:right -40px;}
+.uiBtn, .uiBtn span {display: inline-block;height: 32px;padding-left: 26px;background: url(/public/images/com_bg.png) left 0 no-repeat;cursor: pointer;vertical-align: middle;}
+a {color: #057BD2;}
+.loginMain .form .loginSubmit .uiBtn span {padding-right: 30px;}
+.uiBtn span {padding: 0 26px 0 0;background-position: right 0;color: #FFF;font: 14px SimSun;text-align: center;vertical-align: top;font-weight: bold;line-height: 32px;}
+.regArea {display: inline-block;position: relative;top: 3px;height: 12px;margin-right: 12px;padding-right: 12px;line-height: 12px;font-size: 0;border-right: 1px solid #ddd;z-index: 0;}
+em, i {font-style: normal;}

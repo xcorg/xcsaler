@@ -1,0 +1,24 @@
+#{if allClass.size() > 0}
+	#{list items:allClass.top,as:'topid'}
+		<div class="subView" pid="${topid}">
+			<!-- <ul> -->
+				#{list items:allClass.get(topid),as:'sclass'}
+					#{if (sclass_index-1) % 2 == 0}
+					<ul>
+					#{/if}
+					<li class="subItem">
+						<h3 class="subItem-hd"><a target="_blank" href="/product?cat=${sclass.id}">${sclass.name}</a></h3>
+						<p class="subItem-cat">
+							#{list items:allClass.get(sclass.id),as:'tclass'}
+								<a target="_blank" href="/product?cat=${tclass.id}">${tclass.name}</a>
+							#{/list}
+						</p>
+					</li>
+					#{if (sclass_index-1) % 2 == 1}
+					</ul>
+					#{/if}
+				#{/list}
+			<!-- </ul> -->
+		</div>
+	#{/list}
+#{/if}

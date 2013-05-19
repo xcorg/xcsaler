@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>${appConfig?.title}</title>
+	<meta name="description" content="${appConfig?.description}" />
+	<meta name="keywords" content="${appConfig?.keywords}"/>
+	<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="/public/lib/tmailsider/css/jquery.tmailsider.css" />
+	<script type="text/javascript" src="/public/lib/jquery/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="/public/javascripts/ajax.js"></script>
+</head>
+<body>
+	<div class="yourweb_container">
+		<div style="height:60px;overflow:hidden;"></div>
+		<div id="Z_RightSide" class="sidebar">
+			<h1>仿天猫导航</h1>
+			<p>仿淘宝天猫左侧分类导航 兼容IE6(没有折叠效果), IE7 IE8及以上 Firefox,Chrome等主流浏览器<br/>Design by 夏の寒风 QQ:490720430</p>
+		</div>
+	</div><!--yourweb_container end-->
+	
+	<div id="Z_TypeList" class="Z_TypeList">
+		<h1 class="title">所有商品分类</h1>
+		<div class="Z_MenuList">
+			<ul>
+				<script>
+					load('.Z_MenuList ul','/topclass');
+				</script>
+			</ul>
+		</div>
+		<div class="Z_SubList">
+			<script>
+				load('.Z_SubList','/allclass');
+			</script>
+		</div>		
+	</div>
+	<!--[if IE 6]>
+	<script type="text/javascript" src="/public/lib/tmailsider/js/DD_belatedPNG.js"></script>
+	<script type="text/javascript">
+		head.ready(function(){
+		    DD_belatedPNG.fix('.Z_TypeList .Z_MenuList h3,.Z_TypeList .menuIcon');
+		});
+	</script>
+	<![endif]-->
+	
+	<script type="text/javascript" src="@{'/public/javascripts/head.load.min.js'}"></script>
+	<script type="text/javascript" src="/public/lib/tmailsider/js/jquery.tmailsider.js"></script>
+	<script type="text/javascript">
+		head.js("/public/javascripts/ajax.js");
+		head.ready(function(){
+		    $('#Z_TypeList').Z_TMAIL_SIDER();
+		});
+	</script>
+</body>
+</html>

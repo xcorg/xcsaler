@@ -1,0 +1,21 @@
+#{if topClass.size() > 0}
+	#{list items:topClass,as:'topc'}
+		<li class="list-item${topc.id} ${topc_index%2==0?'alt':''}" wdid="${topc.id}">
+			<h3>${topc.name}</h3>
+			<p>
+				<a href="#">女装</a>
+				<a href="#">男装</a>
+				<a href="#">内衣</a>
+				<a href="#">羽绒</a>
+				<a href="#">呢大衣</a>
+			</p>
+			<p>
+				<a href="#">毛衣</a>
+				<a href="#">保暖</a>
+				<a href="#">睡衣</a>
+				<a href="#">男羽绒</a>
+				<a href="#">男毛衣</a>
+			</p>
+		</li>
+	#{/list}
+#{/if}

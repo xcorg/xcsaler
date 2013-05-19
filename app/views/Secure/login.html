@@ -1,0 +1,162 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<title>${appConfig?.title}</title>
+	<meta name="description" content="${appConfig?.description}"></meta>
+	<meta name="keywords" content="${appConfig?.keywords}"></meta>
+	<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon"></link>
+	<link rel="stylesheet" type="text/css" href="/public/css/login.css"></link>
+	<script type="text/javascript" src="/public/lib/jquery/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		checkInputEvent();
+	});
+	
+	function checkInputEvent(){
+		$("#username").focus(function(){
+			$("#logonIdErrMsg").html('');
+			if ($("#username").val() == "昵称/邮箱/注册手机") {
+				$("#username").val("");
+			}
+		});
+		
+		$("#username").blur(function(){
+			$("#logonIdErrMsg").html('');
+			if ($('#username').val() == "") {
+				$('#username').val('昵称/邮箱/注册手机');
+			}
+		});
+		
+		$("#username").keypress(onLogonKeyPress);
+		$("#password").blur(checkLogonPwdOnBlur);
+		$("#password").keypress(onLogonKeyPress);
+	}
+	
+	// 处理回车事件
+	function onLogonKeyPress(event) {
+		var code =event.keyCode;
+		if(code==13) {
+			prepareLogonSubmit();
+		}
+	}
+	
+	function prepareLogonSubmit(){
+		if(!checkOnSubmit()) {
+			return;
+		}
+		$("#loadingArea").show();
+		$("#loginButtonArea").hide();
+		$('#loginForm').submit();
+	}
+	
+	//提交时检查账号密码
+	function checkOnSubmit() {
+		var username = $('#username').val();
+		if(username=='昵称/邮箱/注册手机'){
+		    username = "";
+		}
+		
+		var isok = true;
+		if (username == null || username == "") {
+			$("#logonIdErrMsg").html('<em class="tipFalse"></em>请输入昵称/邮箱/注册手机！');
+			isok = false;
+		}else{
+			$("#logonIdErrMsg").html('');
+		}
+		
+		var pwd = $('#password').val();
+		if (pwd == null || pwd == "") {
+			$("#passwordErrMsg").html('<em class="tipFalse"></em>请输入密码！');
+			isok = false;
+		} else if (pwd.length<6 || pwd.length>20) {
+			$("#passwordErrMsg").html('<em class="tipFalse"></em>请输入6-20位密码！');
+			isok = false;
+		} else {
+			$("#passwordErrMsg").html('');
+		}
+		
+		return isok;
+	}
+	
+	//失去焦点时检查密码
+	function checkLogonPwdOnBlur() {
+		var pwd = $('#password').val();
+		if (pwd == null || pwd == "") {
+			$("#passwordErrMsg").html('');
+			return false;
+		} else if (pwd.length<6 || pwd.length>20) {
+			$("#passwordErrMsg").html('<em class="tipFalse"></em>请输入6-20位密码！');
+			return false;
+		} else {
+			$("#passwordErrMsg").html('');
+			return true;
+		}
+	}
+	
+	String.prototype.Trim = function(){
+		return this.replace(/(^\s*)|(\s*$)/g, "");
+	}
+</script>
+</head>
+<body>
+<div id="grayLayer" style=""></div>
+
+<div class="simpleHeader">
+	<div class="wrapper logo">
+		<a href="/" title="返回首页">
+			<img src="/public/images/logo.jpg" alt="首页"></img>
+		</a>
+	</div>
+</div>
+
+<div class="loginMain wrapper">
+	<div class="welcome l">
+		<img class="imgCon" src="/public/images/welcome.jpg"></img>
+	</div>
+	<div class="login r" style="top: 49px;">
+		<div class="loginBox clearfix" id="normalLoginBox">
+		<h2 class="clearfix">用户登录</h2>
+		<form method="post" action="/secure/authenticate" id="loginForm">
+			#{if flash.error}
+				<div class="msg_box msg_error">&{flash.error}</div>
+			#{/if} 
+			#{if flash.success}
+				<div class="msg_box msg_ok">&{flash.success}</div>
+			#{/if}
+			<div class="form clearfix">
+				<dl>
+					<dt>用户名：</dt>
+					<dd>
+						<input name="username" id="username" type="text" class="uiText" style="color:#999;" tabindex="1" value="昵称/邮箱/注册手机" onfocus="snTxtFocus(this,'昵称/邮箱/注册手机')" onblur="snTxtBlur(this,'昵称/邮箱/注册手机')" onkeydown="snTxtKeyDown(this,'昵称/邮箱/注册手机')" onclick="snTxtClickToLeft(this,'昵称/邮箱/注册手机')"></input>
+						<p class="iptTip" id="logonIdErrMsg"></p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>密　码：</dt>
+					<dd>
+						<input name="password" id="password" type="password" class="uiText" tabindex="2" maxlength="20" value=""></input>
+						<p class="iptTip" id="passwordErrMsg"></p>
+					</dd>
+				</dl>
+				<dl class="checkCode"></dl>
+				<dl class="loginSubmit clearfix">
+					<dt></dt>
+					<dd id="loginButtonArea">
+						<a class="uiBtn b1" id="submit" tabindex="4" href="javascript:prepareLogonSubmit();"><span><b>登 录</b></span></a>
+						<a href="/registerUser">注册</a>
+						<i class="regArea"></i>
+						<a href="/retrievePassword">忘记密码？</a>
+					</dd>
+					<dd id="loadingArea" class="loading" style="display:none;">
+						<p>登录中，请稍候...</p>
+					</dd>
+				</dl>
+			</div>
+		</form>
+		<div class="clear"></div>
+	</div>
+	<div class="bottShadow"></div>
+	</div>
+</div>
+<div class="clear"></div>
+</body>
+</html>
