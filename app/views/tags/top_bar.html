@@ -1,0 +1,49 @@
+<!-- <link rel="stylesheet" href="/public/css/style.css" media="all" type="text/css"> -->
+*{<ul class="fl" id="styleConfig" style="width:30%">
+	<li class="sep">&{'topbar.welcome'} <a href="/myhome">${user?.name}</a></li>
+	<li>
+		<span>
+			<a class="track" href="@{Secure.login()}">[&nbsp;登录&nbsp;</a>|<a class="track" href="">&nbsp;免费注册&nbsp;]</a>
+		</span>
+	</li>
+	<li id="pageUsername"  style="display:none" >${user?.username}</li>
+    <li class="sep"><a href="@{Secure.logout()}">&{'topbar.logout'}</a></li>
+</ul>
+<ul class="new_items fr">
+	
+	#{if controllers.Security.isUser()}
+	<li class="sep" ></li>
+	<li><a href="@{Settings.index()}">&{'topbar.settings'}</a></li>
+	<li class="sep" ></li>
+	<li><a href="@{Settings.feedback()}">&{'topbar.userfeedback'} </a></li>
+	<li class="sep" ></li>
+	<li><a href="@{Settings.map()}">&{'topbar.map'}</a></li>
+	<li class="sep" ></li>
+	<li><a href="@{Settings.sysHelp()}">&{'topbar.syshelp'}</a></li>
+	#{/if}
+ </ul>}*
+
+<div class="headerTopAreaBox">
+	<div class="headerTopArea">
+		<div class="headerTop">
+			<div class="headerTopLeft">
+				<div class="loginArea" id="welcome">
+					&{'topbar.welcome'}&nbsp;
+					<span>
+						<a class="track" href="@{Secure.login()}">[&nbsp;登录&nbsp;</a>|
+						<a class="track" href="">&nbsp;免费注册&nbsp;]</a>
+					</span>
+				</div>
+				<div class="recommendArea">
+					<a class="track" href="/mycommend" rel="nofollow">为您推荐</a>
+					<a class="track" href="/myorder" rel="nofollow">我的订单</a>
+					<a href="" id="vanclFavorite">收藏本站</a>
+				</div>
+			</div>
+			<div class="headerTopRight">
+			</div>
+			<span class="blank0"></span>
+		</div>
+	</div>
+</div>
+

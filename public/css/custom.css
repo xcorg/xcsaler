@@ -1,0 +1,57 @@
+.stA .box_x_content,.stA .box_c_heading,.stA #top_bar,.stA #slide_content,.stA #sidebar .micro-hover-closed,.stA #sidebar .micro-open
+	{
+	border-color: #444
+}
+
+.stB .box_x_content,.stB .box_c_heading,.stB #top_bar,.stB #slide_content,.stB #sidebar .micro-hover-closed,.stB #sidebar .micro-open
+	{
+	border-color: #005F6B
+}
+
+.stC .box_x_content,.stC .box_c_heading,.stC #top_bar,.stC #slide_content,.stC #sidebar .micro-hover-closed,.stC #sidebar .micro-open
+	{
+	border-color: #5f0609
+}
+
+.stD .box_x_content,.stD .box_c_heading,.stD #top_bar,.stD #slide_content,.stD #sidebar .micro-hover-closed,.stD #sidebar .micro-open
+	{
+	border-color: #003e5f
+}
+
+.stE .box_x_content,.stE .box_c_heading,.stE #top_bar,.stE #slide_content,.stE #sidebar .micro-hover-closed,.stE #sidebar .micro-open
+	{
+	border-color: #543511
+}
+
+/* 头部 */
+#top_bar {
+	font-size: 12px;
+}
+
+#top_bar li.sep img {
+	vertical-align: middle !important;
+}
+
+#top_bar {height:26px;line-height:26px;font-size:11px;background:#e6e6e6;border-bottom:1px solid #ccc}
+#top_bar li {display:inline;padding-right:6px;line-height:26px}
+#top_bar li.sep {border-right:1px solid #ccc;margin-right:4px;}
+		
+.stA .table_a thead th,.stA .table_a thead td,.stA #top_bar {background:#444;color:#fff;text-shadow:none;}
+.stA .box_c_content,.stA .box_c_heading,.stA #top_bar,.stA #slide_content,.stA #sidebar .micro-hover-closed, .stA #sidebar .micro-open {border-color:#444}
+	
+.stB .table_a thead th,.stB .table_a thead td,.stB #top_bar {background:#005F6B;color:#fff;text-shadow:none}
+.stB .box_c_content,.stB .box_c_heading,.stB #top_bar,.stB #slide_content,.stB #sidebar .micro-hover-closed, .stB #sidebar .micro-open {border-color:#005F6B}
+	
+.stC .table_a thead th,.stC .table_a thead td,.stC #top_bar {background:#5f0609;color:#fff;text-shadow:none}
+.stC .box_c_content,.stC .box_c_heading,.stC #top_bar,.stC #slide_content,.stC #sidebar .micro-hover-closed, .stC #sidebar .micro-open {border-color:#5f0609}
+
+.stD .table_a thead th,.stD .table_a thead td,.stD #top_bar {background:#003e5f;color:#fff;text-shadow:none}
+.stD .box_c_content,.stD .box_c_heading,.stD #top_bar,.stD #slide_content,.stD #sidebar .micro-hover-closed, .stD #sidebar .micro-open {border-color:#003e5f}
+
+.stE .table_a thead th,.stE .table_a thead td,.stE #top_bar {background:#543511;color:#fff;text-shadow:none}
+.stE .box_c_content,.stE .box_c_heading,.stE #top_bar,.stE #slide_content,.stE #sidebar .micro-hover-closed, .stE #sidebar .micro-open {border-color:#543511}
+
+.stA #top_bar a,.stB #top_bar a,.stC #top_bar a,.stD #top_bar a,.stE #top_bar a {color:#fff;text-decoration:underline}
+
+.stA #top_bar a:hover,.stB #top_bar a:hover,.stC #top_bar a:hover,.stD #top_bar a:hover,.stE #top_bar a:hover {text-decoration:none}
+	

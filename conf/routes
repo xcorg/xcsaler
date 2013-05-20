@@ -6,6 +6,10 @@
 #GET     /                                       Application.index
 GET     /                                       Home.index
 
+# 用户首页
+GET     /myhome                                 UserHome.index
+GET     /myorder                                UserHome.order
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

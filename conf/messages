@@ -1,3 +1,22 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+
+#登录界面
+secure.title=天狗购物
+secure.username=用户名:
+secure.password=密&nbsp;&nbsp;&nbsp;码:
+secure.remember=记住我
+secure.signin=登&nbsp;录
+secure.error=无效的用户名或密码
+secure.logout=您已安全退出
+
+#顶部状态条
+topbar.welcome=您好，欢迎光临天狗诚品! 
+topbar.logout=退出
+topbar.account=账号
+topbar.settings=系统设置
+topbar.userfeedback=用户反馈
+topbar.map=功能地图
+topbar.syshelp = 系统帮助
+
