@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="/public/lib/bootstrap/css/bootstrap-responsive.min.css"></link>
 	<link rel="stylesheet" type="text/css" href="/public/lib/bootstrap/css/layoutit.css"></link>
 	<script type="text/javascript" src="/public/lib/jquery/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="/public/javascripts/ajax.js"></script>
+	<script type="text/javascript" src="@{'/public/javascripts/head.load.min.js'}"></script>
 	<script type="text/javascript" src="/public/lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -31,21 +33,21 @@
 									<a href="#">主页</a>
 								</li>
 								<li class="dropdown">
-									 <a data-toggle="dropdown" class="dropdown-toggle" href="#">设置<strong class="caret"></strong></a>
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#">设置<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
-										<li class="active">
-											<a href="#">安全设置</a>
+										<li>
+											<a href="javascript:void(0)" url="/myaqsz" class="ajaxd" totarget="#main_content">安全设置</a>
 										</li>
 										<li>
-											<a href="#">收货地址</a>
+											<a href="javascript:void(0)" url="/myshdz" class="ajaxd" totarget="#main_content">收货地址</a>
 										</li>
 										<li>
-											<a href="#">个人信息</a>
+											<a href="javascript:void(0)" url="/myinfo" class="ajaxd" totarget="#main_content">个人信息</a>
 										</li>
 									</ul>
 								</li>
 								<li class="dropdown">
-									 <a data-toggle="dropdown" class="dropdown-toggle" href="#">收藏夹<strong class="caret"></strong></a>
+									<a data-toggle="dropdown" class="dropdown-toggle" href="#">收藏夹<strong class="caret"></strong></a>
 									<ul class="dropdown-menu">
 										<li>
 											<a href="#">收藏的宝贝</a>
@@ -106,62 +108,72 @@
 					列表标题
 				</li> -->
 				<li class="active">
-					<a href="#">欢迎页</a>
+					<a href="/mywelcome" class="ajax" target="#main_content">欢迎页</a>
 				</li>
 				<li>
-					<a href="#">我的购物车</a>
+					<a href="/mycart" class="ajax" target="#main_content">我的购物车</a>
 				</li>
 				<li>
-					<a href="#">我的订单</a>
+					<a href="/myorder" class="ajax" target="#main_content">我的订单</a>
 				</li>
 				<li>
-					<a href="#">收货地址</a>
+					<a href="/myshdz" class="ajax" target="#main_content">收货地址</a>
 				</li>
 				<li>
-					<a href="#">我的收藏</a>
+					<a href="/myfav" class="ajax" target="#main_content">我的收藏</a>
 				</li>
 				<li>
-					<a href="#">咨询/回复</a>
+					<a href="/myzxhf" class="ajax" target="#main_content">咨询/回复</a>
 				</li>
 				<li>
-					<a href="#">我的评论</a>
+					<a href="/mycomment" class="ajax" target="#main_content">我的评论</a>
 				</li>
 				<li>
-					<a href="#">资金管理</a>
+					<a href="/myzjgl" class="ajax" target="#main_content">资金管理</a>
 				</li>
 				<li>
-					<a href="#">我的积分</a>
+					<a href="/myscore" class="ajax" target="#main_content">我的积分</a>
 				</li>
 				<li>
-					<a href="#">优惠卡券</a>
-				</li>
-				<li class="divider"></li>
-				<li>
-					<a href="#">退货管理</a>
-				</li>
-				<li>
-					<a href="#">举报管理</a>
+					<a href="/myyhkq" class="ajax" target="#main_content">优惠卡券</a>
 				</li>
 				<li class="divider"></li>
 				<li>
-					<a href="#">安全设置</a>
+					<a href="/mythgl" class="ajax" target="#main_content">退货管理</a>
 				</li>
 				<li>
-					<a href="#">我的好友</a>
-				</li>
-				<li>
-					<a href="#">消息提醒</a>
+					<a href="/myjbgl" class="ajax" target="#main_content">举报管理</a>
 				</li>
 				<li class="divider"></li>
 				<li>
-					<a href="#">帮助</a>
+					<a href="/myaqsz" class="ajax" target="#main_content">安全设置</a>
+				</li>
+				<li>
+					<a href="/myhy" class="ajax" target="#main_content">我的好友</a>
+				</li>
+				<li>
+					<a href="/myxxtx" class="ajax" target="#main_content">消息提醒</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="/myhelp" class="ajax" target="#main_content">帮助</a>
 				</li>
 			</ul>
 		</div>
 		<div class="span10 column ui-sortable">
-			<div style="height:700px;"></div>
+			<div style="height:700px;" id="main_content">
+				<script>
+					load("#main_content","/mywelcome");
+				</script>
+			</div>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	//head.js("");
+	head.ready(function(){
+	    //load("#main_content","/mywelcome");
+	});
+</script>
 </body>
 </html>

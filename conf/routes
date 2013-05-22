@@ -8,7 +8,23 @@ GET     /                                       Home.index
 
 # 用户首页
 GET     /myhome                                 UserHome.index
+GET     /mywelcome                              UserHome.welcome
 GET     /myorder                                UserHome.order
+GET     /mycart                                 UserHome.cart
+GET     /myshdz                                 UserHome.deliveryAddress
+GET     /myfav                                  UserHome.favorite
+GET     /myzxhf                                 UserHome.askReply
+GET     /mycomment                              UserHome.comment
+GET     /myzjgl                                 UserHome.fund
+GET     /myscore                                UserHome.score
+GET     /myyhkq                                 UserHome.discount
+GET     /mythgl                                 UserHome.returnGoods
+GET     /myjbgl                                 UserHome.offense
+GET     /myaqsz                                 UserHome.secureSetting
+GET     /myhy                                   UserHome.friends
+GET     /myxxtx                                 UserHome.message
+GET     /myhelp                                 UserHome.help
+GET     /myinfo                                 UserHome.userInfo
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

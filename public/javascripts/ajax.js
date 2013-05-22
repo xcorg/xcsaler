@@ -123,6 +123,35 @@ $('.ajax').live('click', function() {
     }
 });
 
+$('.ajaxd').live('click', function() {
+    var a = this;
+    $(".tipT_arrow").parent().hide();
+    try {
+        // 取得handler元素
+        var url = $(this).attr('url');
+        var target = $(this).attr('totarget');
+        var callback = $(this).attr('callback');
+        if ($(a).data('lock') != 'locked') {
+            $(a).data('lock', 'locked');
+            load(target, url, function() {
+                $(a).data('lock', '');
+                if (/.+/.test(callback) && callback != undefined) {
+                    var funcs = callback.split(',');
+                    for ( var i = 0; i < funcs.length; i++) {
+                        eval(funcs[i]).call(a, $(target));
+                    }
+                }
+            });
+        }
+    } catch (e) {
+        alert('ajax error:' + e);
+        throw e;
+    } finally {
+        $(a).removeData('lock');
+        //return false;
+    }
+});
+
 function loadbox(target, type, data, callback, async) {
     var url = parseURL(type, data);
     load(target, url, callback, async);
