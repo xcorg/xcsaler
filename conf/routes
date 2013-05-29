@@ -25,6 +25,7 @@ GET     /myhy                                   UserHome.friends
 GET     /myxxtx                                 UserHome.message
 GET     /myhelp                                 UserHome.help
 GET     /myinfo                                 UserHome.userInfo
+GET     /usergrade                              UserHome.usergrade
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

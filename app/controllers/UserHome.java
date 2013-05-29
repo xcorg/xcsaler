@@ -123,7 +123,17 @@ public class UserHome extends Controller {
         render();
     }
 
+    /**
+     * 用户信息
+     */
     public static void userInfo() {
+        render();
+    }
+
+    /**
+     * 用户级别介绍
+     */
+    public static void usergrade() {
         render();
     }
 
