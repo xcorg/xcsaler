@@ -1,1 +1,76 @@
-userInfo
+<form class="form-horizontal">
+	<fieldset>
+		<div class="control-group formSep">
+			<label class="control-label">登录名</label>
+			<div class="controls text_line">
+				<strong>jSmith</strong>
+			</div>
+		</div>
+		<div class="control-group formSep">
+			<label for="fileinput" class="control-label">头像</label>
+			<div class="controls">
+				<div data-provides="fileupload" class="fileupload fileupload-new">
+					<input type="hidden">
+					<div style="width: 80px; height: 80px;" class="fileupload-new thumbnail">
+						<img src="http://www.placehold.it/80x80/EFEFEF/AAAAAA" alt="">
+					</div>
+					<div style="width: 80px; height: 80px; line-height: 80px;" class="fileupload-preview fileupload-exists thumbnail"></div>
+					<span class="btn btn-file">
+						<span class="fileupload-new">选择头像</span>
+						<span class="fileupload-exists">选择头像</span>
+						<input type="file" id="fileinput" name="fileinput">
+					</span>
+					<a data-dismiss="fileupload" class="btn fileupload-exists" href="#">清空头像</a>
+				</div>
+			</div>
+		</div>
+		<div class="control-group formSep">
+			<label for="u_fname" class="control-label">姓名</label>
+			<div class="controls">
+				<input type="text" id="u_fname" class="span5" value="">
+			</div>
+		</div>
+		<div class="control-group formSep">
+			<label for="u_email" class="control-label">邮箱</label>
+			<div class="controls">
+				<input type="text" id="u_email" class="span5" value="">
+			</div>
+		</div>
+		<div class="control-group formSep">
+			<label for="u_password" class="control-label">密码</label>
+			<div class="controls">
+				<div class="sepH_b">
+					<input type="password" id="u_password" class="span5" value=""> 
+					<span class="help-block">输入密码</span>
+				</div>
+				<input type="password" id="s_password_re" class="span5"> 
+				<span class="help-block">重复密码</span>
+			</div>
+		</div>
+		<div class="control-group formSep">
+			<label class="control-label">性别</label>
+			<div class="controls">
+				<label class="radio inline"> 
+					<input type="radio" value="male" id="s_male" name="f_gender" checked="checked"> 男
+				</label> 
+				<label class="radio inline"> 
+					<input type="radio" value="female" id="s_female" name="f_gender"> 女
+				</label>
+			</div>
+		</div>
+		<div class="control-group formSep">
+			<label for="u_signature" class="control-label">自我描述</label>
+			<div class="controls">
+				<textarea rows="6" id="u_signature" class="span6" style="overflow: auto; word-wrap: break-word; max-height: 100px; min-height: 100px; height: 80px;"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<button class="btn btn-gebo" type="submit">保存</button>
+				<button class="btn">取消</button>
+			</div>
+		</div>
+	</fieldset>
+</form>
+<script src="/public/lib/forms/jquery.autosize.min.js"></script>
+<script src="/public/lib/bootstrap/js/bootstrap.plugins.min.js"></script>
