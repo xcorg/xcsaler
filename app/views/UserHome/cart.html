@@ -1,1 +1,80 @@
-cart
+<style type="text/css">
+	table th{text-align:center; }
+	table{ font-size:14px; }
+	table a {color: #36c;text-decoration: none;font-size:12px;}
+	.s-amount input{margin-bottom:5px;}
+</style>
+<table class="table table-bordered table-striped table_vam dataTable" id="dt_gal" aria-describedby="dt_gal_info">
+	<thead>
+		<tr>
+			<th style="text-align:center;" class="table_checkbox" style="width: 13px;">
+				<input type="checkbox" name="select_rows" class="select_rows" data-tableid="dt_gal">
+			</th>
+			<th class="sorting_disabled" style="width: 50%;">店铺宝贝</th>
+			<th class="sorting_disabled" style="width: 60px;">单价(元)</th>
+			<th class="sorting_disabled" style="width: 100px;">数量</th>
+			<th class="sorting_disabled" style="width: 60px;">小计(元)</th>
+			<th class="sorting_disabled" style="width: 20px;"></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr class="odd">
+			<td class="tac">
+				<input type="checkbox" name="row_sel" class="row_sel">
+			</td>
+			<td>
+				<div>店铺：<a href="" target="_blank">AAAA</a></div>
+				<a href="" target="_blank"> 
+					<img class="itempic" src="http://img02.taobaocdn.com/bao/uploaded/i2/18607021297123139/T12AB3XvhfXXXXXXXX_!!0-item_pic.jpg_60x60.jpg">
+					斯兰扎克枸杞蜂蜜 : 斯兰扎克枸杞蜂蜜优惠装150g*3瓶
+				</a>
+			</td>
+			<td class="tac">
+			 	<span class="amount">0.65</span>
+			</td>
+			<td class="s-amount tac" style="width: 60px;">
+	            <a href="javascript:void(0)" class="minus">-</a>
+	            <input type="text" value="2" class="text text-amount" data-max="8877" data-stock="8877" data-now="2">
+	            <a href="javascript:void(0)" class="plus">+</a>
+	            <em class="error-msg" style="display:none"></em>
+			</td>
+			<td class="tac">
+				<span class="classAmount">45</span>
+			</td>
+			<td class="tac">
+				<a href="#" title="Delete">
+					<i class="icon-trash"></i>
+				</a>
+			</td>
+		</tr>
+		<tr class="even">
+			<td class="tac"><input type="checkbox" name="row_sel" class="row_sel"></td>
+			<td>
+				<div>店铺：<a href="" target="_blank">BBBB</a></div>
+				<a href="" target="_blank">
+    		    	<img class="itempic" src="http://img02.taobaocdn.com/bao/uploaded/i2/18607021297123139/T12AB3XvhfXXXXXXXX_!!0-item_pic.jpg_60x60.jpg">
+    				45合1螺丝刀 苹果iphone4S 电脑手机拆机维修工具 45合一套装起子
+    			</a>
+			</td>
+			<td class="tac">
+				<span class="amount">12.24</span>
+			</td>
+			<td class="s-amount tac" style="width: 60px;">
+	            <a href="javascript:void(0)" class="no-minus">-</a>
+	            <input type="text" value="1" class="text text-amount" data-max="3" data-stock="3" data-now="2">
+	            <a href="javascript:void(0)" class="plus">+</a>
+	            <em class="error-msg" style="display:none"></em>
+			</td>
+			<td class="tac">
+				<span class="classAmount">12.24</span>
+			</td>
+			<td class="tac">
+				<a href="#" title="Delete">
+					<i class="icon-trash"></i>
+				</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<script src="/public/javascripts/cart.js" type="text/javascript"></script>
