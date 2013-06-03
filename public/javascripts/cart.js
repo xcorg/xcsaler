@@ -2,6 +2,19 @@ $(document).ready(function() {
     $('.select_rows').click(function() {
         var tableid = $(this).data('tableid');
         $('#' + tableid).find('input[name=row_sel]').attr('checked', this.checked);
+        
+        $('.select_rows').attr('checked', this.checked);
+    });
+    
+    $('input[type=checkbox]').click(function(){
+        var sum = 0.00;
+        $('#dt_gal tbody').find('.row_sel').each(function(){
+            if($(this).attr('checked')){
+                sum += Number($(this).parents('tr').find('.classAmount').html());
+            }
+        });
+        
+        $('#J_Total').html($.amountFormat(sum,2));
     });
 
     $('input.text-amount').keyup(function() {
@@ -19,7 +32,8 @@ $(document).ready(function() {
         }
 
         // 更新小计
-        totalAmount($(this).parents('tr'));
+        classAmount($(this).parents('tr'));
+        totalAmount();
 
         // TODO 更新数据库
     });
@@ -45,7 +59,8 @@ $(document).ready(function() {
         thisinput.val(newval);
 
         // 更新小计
-        totalAmount($(this).parents('tr'));
+        classAmount($(this).parents('tr'));
+        totalAmount();
 
         // TODO 更新数据库
     });
@@ -72,7 +87,8 @@ $(document).ready(function() {
         $(this).siblings('a.no-minus').removeClass('no-minus').addClass('minus');
 
         // 更新小计
-        totalAmount($(this).parents('tr'));
+        classAmount($(this).parents('tr'));
+        totalAmount();
 
         // TODO 更新数据库
     });
@@ -80,7 +96,7 @@ $(document).ready(function() {
     /**
      * 计算小计
      */
-    function totalAmount(tr) {
+    function classAmount(tr) {
         try {
             var amount = $(tr).find('.amount').html();
             var count = $(tr).find('.text-amount').val();
@@ -88,5 +104,19 @@ $(document).ready(function() {
         } catch (e) {
             $(tr).find('.classAmount').html('');
         }
+    }
+    
+    /**
+     * 计算总价
+     */
+    function totalAmount(){
+        var sum = 0.00;
+        $('#dt_gal tbody').find('.row_sel').each(function(){
+            if($(this).attr('checked')){
+                sum += Number($(this).parents('tr').find('.classAmount').html());
+            }
+        });
+        
+        $('#J_Total').html($.amountFormat(sum,2));
     }
 });

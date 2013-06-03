@@ -297,8 +297,8 @@ list-style: none;
 		td.tal{text-align:left;}
 		td.tac{text-align:center;}
 		
-		fl{float:left}
-		fr{float:right}
+		.fl{float:left}
+		.fr{float:right}
 
 .itempic {
 	float: left;
@@ -369,8 +369,23 @@ a.plus {
 margin-left: 5px;
 }
 
-.classAmount{
+.classAmount,.totalAmount{
 	color: #f60;
 	font: bold 12px tahoma;
 }
-		
+	
+.float-bar .total {
+color: #F60;
+font: 16px tahoma;
+margin-right: 3px;
+text-shadow: 0 1px 1px #CCC;
+vertical-align: top;
+_vertical-align: middle;
+}
+.float-bar .total-price {
+color: #404040;
+margin-left: 2px;
+}
+.g_price {
+font-family: arial;
+}
