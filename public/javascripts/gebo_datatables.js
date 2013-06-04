@@ -9,8 +9,10 @@ var gebo_datatbles = {
             "bSort": false,
             "bProcessing": true,
             "bServerSide": true,  // sAjaxSource为arrays.txt不用设置此选项
+            ///public/javascripts/arrays2.txt
+            //http://www.datatables.net/release-datatables/examples/server_side/scripts/server_processing.php
             "sAjaxSource": '/public/javascripts/arrays2.txt', 
-            "oLanguage" : {
+            "oLanguage" : { 
                     "sProcessing": "<img src='/public/images/loader.gif'/>",
                     "sLengthMenu": "显示 _MENU_ 条",
                     "sZeroRecords": "没有数据",
@@ -32,12 +34,24 @@ var gebo_datatbles = {
                         // Using `row[0]` is equivalent.
                         "mRender": function ( data, type, row ) {
                             //return data +' '+ row[3];
-                            return '<a style="cursor:hand">' + data + '</a>'
+                            return '<a style="cursor:hand"><img class="itempic" src="' + data + '"/></a>'
                         },
                         "aTargets": [ 0 ]   // 第几列
                     },
                     //{ "bVisible": false,  "aTargets": [ 3 ] },
                     //{ "sClass": "center", "aTargets": [ 4 ] }
+                    {
+                        "mRender": function ( data, type, row ) {
+                            return '<a style="cursor:hand;font-size:12px">' + data + '</a>'
+                        },
+                        "aTargets": [ 1 ]   // 第几列
+                    },
+                    {
+                        "mRender": function ( data, type, row ) {
+                            return '<em class="amount" tabindex="0">￥' + data + '</em>'
+                        },
+                        "aTargets": [ 2 ]   // 第几列
+                    }
             ]
             
         });

@@ -794,7 +794,7 @@ td.s-amount .error-msg {
 a.plus {
 	margin-left:5px;
 }
-.classAmount,.totalAmount {
+.amount,.classAmount,.totalAmount {
 	color:#f60;
 	font:bold 12px tahoma;
 }
