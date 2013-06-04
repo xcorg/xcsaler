@@ -1,0 +1,8 @@
+资料：
+http://www.cnblogs.com/haogj/archive/2011/03/05/1971335.html
+
+http://www.datatables.net/release-datatables/examples/data_sources/server_side.html
+
+http://www.datatables.net/release-datatables/examples/server_side/pipeline.html  从服务器获取数据
+
+http://lyj86.iteye.com/blog/1824800  jQuery DataTables插件 列与数据的对应关系
