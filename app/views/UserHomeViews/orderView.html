@@ -1,15 +1,31 @@
-#{if total > 0}
-	#{list items:orderList,as:'order'}
+<table class="table table-striped table-bordered dTableR" id="myorder">
+	<thead>
 		<tr>
-			#{list.userorder id:order.id,title:order.title,time:order.time,state:order.state,amount:order.amount,img:order.img /}
-		<tr>
-	#{/list}
-	#{list.pageajax target:'#divOrder',p:p,ps:ps,total:total,url:'/UserHomeViews/orderView',countUrl:'/UserHomeViews/orderCount' /}
-#{/if}
-#{else}
-	<tr>
-		<td>
- 			暂时没有订单
- 		</td>
- 	</tr>
-#{/else}
+			<th style="width: 57px;"></th>
+			<th>订单商品</th>
+			<th style="width: 70px;">订单金额</th>
+			<th style="width: 160px;">订单时间</th>
+			<th style="width: 65px;">订单状态</th>
+			<th style="width: 57px;">操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		#{if total > 0}
+			#{list items:orderList,as:'order'}
+				<tr>
+					#{list.userorder id:order.id,title:order.title,time:order.time,state:order.state,amount:order.amount,img:order.img /}
+				<tr>
+			#{/list}
+				</tbody>
+			</table>
+			#{list.pageajax target:'#myorderbody',p:p,ps:ps,total:total,url:'/UserHomeViews/orderView',countUrl:'/UserHomeViews/orderCount' /}
+		#{/if}
+		#{else}
+					<tr>
+						<td>
+				 			暂时没有订单
+				 		</td>
+				 	</tr>
+			 	</tbody>
+			</table>
+		#{/else}

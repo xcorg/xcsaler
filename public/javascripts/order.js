@@ -149,4 +149,23 @@ $(document).ready(function() {
         $('#searchType').val('stext');
         oTable.fnFilter($(this).val());
     });*/
+    
+    $("#submitDate").change(function(){
+        var date = $(this).val();
+        load("#myorderbody","/UserHomeViews/orderView?p=1&date=" + date);
+    });
+    
+    $("#orderState").change(function(){
+        var state = $(this).val();
+        load("#myorderbody","/UserHomeViews/orderView?p=1&state=" + state);
+    });
 });
+
+function searchOrder(){
+    var orderKey = $("#orderKey").val();
+    if(orderKey == ""){
+        return;
+    }
+    
+    load("#myorderbody","/UserHomeViews/orderView?p=1&orderKey=" + orderKey);
+}

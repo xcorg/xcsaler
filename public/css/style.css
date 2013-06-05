@@ -1039,3 +1039,7 @@ dd {
 	display: block;
 	-webkit-margin-start: 40px;
 }
+
+.btn{
+	margin:0 10px 10px 10px;
+}

@@ -1,12 +1,14 @@
 *{_page是当前页, _id是id, _total是返回数据的总数（分页）, _pageSize每页大小, _pageCount总页数}*
 
-#{if _docTracking||_export == "yes"}
+#{if _check == "yes"}
 	<input type="checkbox" value="all" id="exportAll" onclick="checkAll()" />
 	<label>全选&nbsp&nbsp</label>
 #{/if}
 
+<div class="fr">
 <span id="footCount"></span>
 <span id="total_count"></span>
+</div>
 
 <script>
     function checkAll() {

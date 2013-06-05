@@ -28,30 +28,30 @@ public class UserHomeViews extends Controller {
     /**
      * 我的订单
      */
-    public static void orderView(Integer p) {
+    public static void orderView(String orderKey, String date, String state, Integer p) {
         List orderList = new ArrayList();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 5; i++) {
             Map order = new HashMap();
             order.put("id", i);
             order.put("img", "http://img10.360buyimg.com/N5/3323/5d29ad2a-affc-4881-aa30-59ca4a0973fb.jpg");
-            order.put("title", "斯兰扎克枸杞蜂蜜 : 斯兰扎克枸杞蜂蜜优惠装150g*3瓶" + i);
+            order.put("title", orderKey + " : 斯兰扎克枸杞蜂" + date + "蜜" + state + ":优惠装150g*3瓶" + i);
             order.put("amount", Math.random() * 100);
             order.put("time", new Date());
-            order.put("state", "已完成" + i);
+            order.put("state", "已完成" + p);
 
             orderList.add(order);
         }
 
         int total = orderList.size();
-        int ps = 20;
+        int ps = 5;
         render(orderList, total, p, ps);
     }
 
-    public static void HotEntityCount() {
+    public static void orderCount() {
         Long count = 50l;
         Long pageCount = PageUtil.totalCount2TotalPage(count, 20);
         Map map = new HashMap();
-        map.put("countUrl", "/UserHomeViews/HotEntityCount");
+        map.put("countUrl", "/UserHomeViews/orderCount");
         map.put("count", count);
         map.put("pageCount", pageCount);
         renderJSON(map);

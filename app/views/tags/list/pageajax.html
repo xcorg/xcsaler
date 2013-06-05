@@ -1,5 +1,4 @@
 #{include 'tags/list/pagefooter.html'/}
-
 <script type="text/javascript">
 	//全局的统计分页的id和统计分页的url
 	//var global_countId='${_id}';
@@ -19,22 +18,29 @@
 			url:url,
 			dataType:"json",
 			success:function(result){
+			    console.log(result);
 				//比较是否是当前ajax请求返回的结果
 				//if(result.id==global_countId && result.countUrl==global_countUrl){
 					if(${_p}==1){
 						if(result.pageCount==1){
 							$("#footCount").html("第1页&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
 						}else{
-							$("#footCount").html("第1页 &nbsp;<a href='javascript:void(0)' onclick='next()' >下一页</a>&nbsp;<a onclick='lastpage()'>最后一页</a>&nbsp;第<input type='text' name='page' id='pageNo'"+
-							"style='width:30px' />页<button onclick='go()'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
+							$("#footCount").html("第1页 &nbsp;<a href='javascript:void(0)' onclick='next()' >下一页</a>" + 
+							"&nbsp;<a href='javascript:void(0)' onclick='lastpage()'>最后一页</a>" + 
+							"&nbsp;第<input type='text' name='page' id='pageNo' style='width:30px' />页"+
+							"<button onclick='go()' class='btn'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
 						}
 					}else{
 						if(${_p}==result.pageCount){
-							$("#footCount").html("<a href='javascript:void(0)' onclick='previous()'>上一页</a>&nbsp;第"+${_p}+"页 &nbsp;第<input type='text' name='page' id='pageNo' style='width:30"+
-							"px' />页<button onclick='go()'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
+							$("#footCount").html("<a href='javascript:void(0)' onclick='previous()'>上一页</a>&nbsp;第" + 
+							${_p} + "页 &nbsp;第<input type='text' name='page' id='pageNo' style='width:30px' />页" +
+							"<button onclick='go()' class='btn'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
 						}else{
-							$("#footCount").html("<a href='javascript:void(0)' onclick='previous()'>上一页</a>&nbsp;第"+${_p}+"页 &nbsp;<a href='javascript:void(0)' onclick='next()' >下一页</a>&nbsp;<a onclick='lastpage()'>最后一页</a>"+ 
-							"&nbsp;第<input type='text' name='page' id='pageNo' style='width:30px' />页<button onclick='go()'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
+							$("#footCount").html("<a href='javascript:void(0)' onclick='previous()'>上一页</a>&nbsp;第" + 
+							${_p} + "页 &nbsp;<a href='javascript:void(0)' onclick='next()' >下一页</a>" + 
+							"&nbsp;<a href='javascript:void(0)' onclick='lastpage()'>最后一页</a>"+ 
+							"&nbsp;第<input type='text' name='page' id='pageNo' style='width:30px' />页<button onclick='go()' class='btn'>go</button>" + 
+							"&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
 						}
 						
 					}
@@ -71,20 +77,19 @@
 				});
 				return false;
 			}else{
-				var url = '${_url}?page='+$page;
+				var url = '${_url}?p='+$page;
 				url = encodeURI(url);
 				load('${_target}',url);
 			}
 		}else{
-			//alert("请输入数字！");
 			$.fancybox({						
-					'transitionIn' : 'elastic',
-					'showCloseButton' : true,
-					'showNavArrows' : false,
-					'overlayOpacity' : '0',
-					'content' : '#shuzi',
-					'type' : 'inline',
-					'hideOnOverlayClick' : false
+				'transitionIn' : 'elastic',
+				'showCloseButton' : true,
+				'showNavArrows' : false,
+				'overlayOpacity' : '0',
+				'content' : '#shuzi',
+				'type' : 'inline',
+				'hideOnOverlayClick' : false
 			});
 				
 			$('.noYes').click(function(){
@@ -102,8 +107,12 @@
 		load('${_target}',url);
 	}
 	
-	head.ready(function(){
-		count();
+	//head.ready(function(){
+	//	count();
+	//});
+	
+	$(document).ready(function(){
+	    count();
 	});
 
 </script>
