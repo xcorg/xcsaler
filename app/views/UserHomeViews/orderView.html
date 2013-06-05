@@ -1,0 +1,15 @@
+#{if total > 0}
+	#{list items:orderList,as:'order'}
+		<tr>
+			#{list.userorder id:order.id,title:order.title,time:order.time,state:order.state,amount:order.amount,img:order.img /}
+		<tr>
+	#{/list}
+	#{list.pageajax target:'#divOrder',p:p,ps:ps,total:total,url:'/UserHomeViews/orderView',countUrl:'/UserHomeViews/orderCount' /}
+#{/if}
+#{else}
+	<tr>
+		<td>
+ 			暂时没有订单
+ 		</td>
+ 	</tr>
+#{/else}

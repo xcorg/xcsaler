@@ -1,3 +1,7 @@
+body {
+	font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+	color: #333;
+}
 .msg_box {
 	padding:6px 20px 6px 38px;
 }
@@ -945,4 +949,93 @@ div.dataTables_paginate {
 }
 .dTableR {
 	width:100% !important
+}
+
+
+/*order*/
+.o-mt {
+	border: 1px solid #e6e6e6;
+	border-bottom: 2px solid #c30000;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 10px;
+}
+
+.o-mt h2 {
+	color: #cc0000;
+	padding-left: 16px;
+	float: left;
+	font-size: 14px;
+}
+
+#order01 {
+	margin-top: -10px;
+	line-height: 20px;
+}
+
+.m {
+	border: 1px solid #e6e6e6;
+}
+
+.m,.sm {
+	margin-bottom: 20px;
+}
+
+#order01 .mc {
+	padding: 10px 20px;
+	line-height: 25px;
+}
+
+.m5 .mc {
+	border: 1px solid #e6e6e6;
+	border-top: none;
+}
+
+#order01 dl,.filter-item .item-con {
+	overflow: hidden;
+}
+
+#order01 {
+	font-family: Verdana;
+}
+
+dl {
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+#order01 dt {
+	width: 70px;
+	text-align: right;
+}
+
+#order01 dt,#order01 dd {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+dt {
+	display: block;
+}
+
+#order01 dd {
+	margin-right: 25px;
+}
+
+#order01 dt,#order01 dd {
+	float: left;
+}
+
+.ftx-03,a.flk-03:link,a.flk-03:visited,.flk-03 a:link,.flk-03 a:visited
+	{
+	color: #999999;
+}
+
+dd {
+	display: block;
+	-webkit-margin-start: 40px;
 }

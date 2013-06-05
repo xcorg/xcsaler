@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/public/javascripts/head.load.min.js"></script>
+
 <div class="o-mt">
 	<h2>我的订单</h2>
 </div>
@@ -12,23 +12,21 @@
 		</dl>
 		<dl>
 			<dt>特色服务：</dt>
-			<dd>
-				<a href="" target="_blank">XXXXXX</a>
-			</dd>
-			<dd>
-				<a href="" target="_blank">YYYYYY</a>
-			</dd>
+			<dd><a href="" target="_blank">XXXXXX</a></dd>
+			<dd><a href="" target="_blank">YYYYYY</a></dd>
 		</dl>
 	</div>
 </div>
 
+<input type="hidden" id="searchType" value="1"/>
 <table class="table table-striped table-bordered dTableR" id="myorder">
-	<thead>
-		<tr>
-			<th style="width: 57px;"></th>
-			<th>订单商品</th>
-			<th style="width: 70px;">订单金额</th>
-			<th style="width: 160px;"><select id="submitDate" name="submitDate" class="sele" searchType="date">
+    <thead>
+        <tr>
+            <th style="width: 57px;"></th>
+            <th>订单商品</th>
+            <th style="width: 70px;">订单金额</th>
+            <th style="width: 160px;">
+				<select id="submitDate" name="submitDate" class="sele" searchType="date">
 					<option value="0" selected="">全部时间</option>
 					<option value="1">最近三个月</option>
 					<option value="2">今年内</option>
@@ -38,25 +36,27 @@
 					<option value="5">2009年</option>
 					<option value="6">2008年</option>
 					<option value="7">2008年以前</option>
-			</select></th>
-			<th style="width: 65px;"><select id="orderState" name="orderState" class="sele" searchType="state">
+				</select>
+			</th>
+            <th style="width: 65px;">
+				<select id="orderState" name="orderState" class="sele" searchType="state">
 					<option value="4096" selected="">全部状态</option>
 					<option value="1">等待付款</option>
 					<option value="32">等待自提</option>
 					<option value="128">等待收货</option>
 					<option value="1024">已完成</option>
 					<option value="-1">已取消</option>
-			</select></th>
-			<th style="width: 57px;">操作</th>
-		</tr>
-	</thead>
-	<tbody id="myorderbody">
-		
-	</tbody>
+				</select>
+			</th>
+            <th style="width: 57px;">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
 </table>
-<script>
-    load("#myorderbody","@{UserHomeViews.orderView()}?p=1");
-</script>
+<!-- <script src="/public/javascripts/gebo_datatables.js"></script> -->
+<script src="/public/javascripts/order.js"></script>
 <style>
 <!--
 	.sele{width:auto;}
@@ -66,7 +66,6 @@
 	.s-amount input{margin-bottom:5px;}
 -->
 </style>
-
 <!-- 
 <tr>
             <td>Trident</td>

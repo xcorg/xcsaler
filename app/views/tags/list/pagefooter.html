@@ -1,0 +1,21 @@
+*{_page是当前页, _id是id, _total是返回数据的总数（分页）, _pageSize每页大小, _pageCount总页数}*
+
+#{if _docTracking||_export == "yes"}
+	<input type="checkbox" value="all" id="exportAll" onclick="checkAll()" />
+	<label>全选&nbsp&nbsp</label>
+#{/if}
+
+<span id="footCount"></span>
+<span id="total_count"></span>
+
+<script>
+    function checkAll() {
+        var checkall = $("#exportAll").attr("checked");
+        if (checkall == "checked") {
+            $("input[name='check_lst']").attr("checked", true);
+        } else {
+            $("input[name='check_lst']").attr("checked", false);
+        }
+    }
+</script>
+

@@ -1,0 +1,121 @@
+#{include 'tags/list/pagefooter.html'/}
+
+<script type="text/javascript">
+	//全局的统计分页的id和统计分页的url
+	//var global_countId='${_id}';
+	//var global_countUrl="${_countUrl}";
+
+	function next(){
+		var url = '${_url}?p=${_p+1}';
+		url = encodeURI(url);
+		load('${_target}',url);
+	}
+
+	//获取文章总数
+	function count(){
+		var url='${_countUrl}?';
+		$.ajax({
+			type:"get",
+			url:url,
+			dataType:"json",
+			success:function(result){
+				//比较是否是当前ajax请求返回的结果
+				//if(result.id==global_countId && result.countUrl==global_countUrl){
+					if(${_p}==1){
+						if(result.pageCount==1){
+							$("#footCount").html("第1页&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
+						}else{
+							$("#footCount").html("第1页 &nbsp;<a href='javascript:void(0)' onclick='next()' >下一页</a>&nbsp;<a onclick='lastpage()'>最后一页</a>&nbsp;第<input type='text' name='page' id='pageNo'"+
+							"style='width:30px' />页<button onclick='go()'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
+						}
+					}else{
+						if(${_p}==result.pageCount){
+							$("#footCount").html("<a href='javascript:void(0)' onclick='previous()'>上一页</a>&nbsp;第"+${_p}+"页 &nbsp;第<input type='text' name='page' id='pageNo' style='width:30"+
+							"px' />页<button onclick='go()'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
+						}else{
+							$("#footCount").html("<a href='javascript:void(0)' onclick='previous()'>上一页</a>&nbsp;第"+${_p}+"页 &nbsp;<a href='javascript:void(0)' onclick='next()' >下一页</a>&nbsp;<a onclick='lastpage()'>最后一页</a>"+ 
+							"&nbsp;第<input type='text' name='page' id='pageNo' style='width:30px' />页<button onclick='go()'>go</button>&nbsp;共<span id='pCount'>"+result.pageCount+"</span>页");
+						}
+						
+					}
+					$("#total_count").html("&nbsp;共"+result.count+"条");
+				}
+			//}
+		});
+	}
+	
+	function previous(){
+		var url = '${_url}?p=${_p-1}';
+		url = encodeURI(url);
+		load('${_target}',url);
+	}
+	
+	function go(){
+		var $page = $("#pageNo").val();
+		var pageCount = $("#pCount").text();
+		if($page.match(/^[0-9]+$/)){///\d+/
+			if($page <= 0 || $page-pageCount > 0){
+				$.fancybox({						
+					'transitionIn' : 'elastic',
+					'showCloseButton' : true,
+					'showNavArrows' : false,
+					'overlayOpacity' : '0',
+					'content' : '#nullshuzi',
+					'type' : 'inline',
+					'hideOnOverlayClick' : false
+				});
+				
+				$('.noYes').click(function(){
+					$.fancybox.close();
+					return false;
+				});
+				return false;
+			}else{
+				var url = '${_url}?page='+$page;
+				url = encodeURI(url);
+				load('${_target}',url);
+			}
+		}else{
+			//alert("请输入数字！");
+			$.fancybox({						
+					'transitionIn' : 'elastic',
+					'showCloseButton' : true,
+					'showNavArrows' : false,
+					'overlayOpacity' : '0',
+					'content' : '#shuzi',
+					'type' : 'inline',
+					'hideOnOverlayClick' : false
+			});
+				
+			$('.noYes').click(function(){
+				$.fancybox.close();
+				return false;
+			});
+			return false;
+		}
+	}
+	
+	function lastpage(){
+	    var p = $("#pCount").text();
+		var url = '${_url}?p='+p;
+		url = encodeURI(url);
+		load('${_target}',url);
+	}
+	
+	head.ready(function(){
+		count();
+	});
+
+</script>
+<div style="display:none">
+	<div id="shuzi">请输入数字。<br />
+	<br /><br />
+	 <p class="tac sepH_b"> <a href="javascript:void(0)" class="btn btn_c noYes" >确定</a> </p>
+	</div>	
+</div>
+<div style="display:none">
+	<div id="nullshuzi">请输入大于0的数且小于等于总页数的整数！<br />
+	<br /><br />
+	 <p class="tac sepH_b"> <a href="javascript:void(0)" class="btn btn_c noYes" >确定</a> </p>
+	</div>	
+</div>
