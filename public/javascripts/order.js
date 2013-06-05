@@ -1,4 +1,4 @@
-(function($) {
+/*(function($) {
     $.fn.dataTableExt.oApi.fnGetColumnData = function(oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty) {
         // check that we have a column id
         if (typeof iColumn == "undefined")
@@ -57,10 +57,10 @@ function fnCreateSelect(aData) {
         r += '<option value="' + aData[i] + '">' + aData[i] + '</option>';
     }
     return r + '</select>';
-}
+}*/
 
 $(document).ready(function() {
-    var oTable = $('#myorder').dataTable({
+    /*var oTable = $('#myorder').dataTable({
         "sDom" : "<'row'<'span6'<'dt_actions'>l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
         "sPaginationType" : "bootstrap_alt",
         "bSort" : false,
@@ -145,7 +145,7 @@ $(document).ready(function() {
         });
     });
     
-    /*$("#myorder_filter input").keyup(function(){
+    $("#myorder_filter input").keyup(function(){
         $('#searchType').val('stext');
         oTable.fnFilter($(this).val());
     });*/
