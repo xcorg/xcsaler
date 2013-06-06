@@ -3,16 +3,17 @@
 	//全局的统计分页的id和统计分页的url
 	//var global_countId='${_id}';
 	//var global_countUrl="${_countUrl}";
+	var param = '${_param}';
 
 	function next(){
-		var url = '${_url}?p=${_p+1}';
+		var url = '${_url}?p=${_p+1}&' + param;
 		url = encodeURI(url);
 		load('${_target}',url);
 	}
 
 	//获取文章总数
 	function count(){
-		var url='${_countUrl}?';
+		var url='${_countUrl}?&' + param;
 		$.ajax({
 			type:"get",
 			url:url,
@@ -51,7 +52,7 @@
 	}
 	
 	function previous(){
-		var url = '${_url}?p=${_p-1}';
+		var url = '${_url}?p=${_p-1}&' + param;
 		url = encodeURI(url);
 		load('${_target}',url);
 	}
@@ -77,7 +78,7 @@
 				});
 				return false;
 			}else{
-				var url = '${_url}?p='+$page;
+				var url = '${_url}?p=' + $page + '&' + param;
 				url = encodeURI(url);
 				load('${_target}',url);
 			}
@@ -102,7 +103,7 @@
 	
 	function lastpage(){
 	    var p = $("#pCount").text();
-		var url = '${_url}?p='+p;
+		var url = '${_url}?p=' + p + '&' + param;
 		url = encodeURI(url);
 		load('${_target}',url);
 	}
