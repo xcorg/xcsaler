@@ -1043,3 +1043,19 @@ dd {
 .btn{
 	margin:0 10px 10px 10px;
 }
+
+.breadcrumb {
+height: 20px;
+padding: 0 0 4px 6px;
+margin-bottom: 10px;
+overflow: hidden;
+line-height: 20px;
+vertical-align: baseline;
+}
+.breadcrumb span {
+font-family: "\5b8b\4f53";
+}
+
+.ftx14, .flk14 a:link, .flk14 a:visited, a.flk14:link, a.flk14:visited {
+color: #12A000;
+}

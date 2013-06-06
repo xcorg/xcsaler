@@ -1,0 +1,49 @@
+#orderstate {
+	border: 1px solid #EED97C; padding : 0 5px;
+	background: #FFFCEB;
+	padding: 0 5px;
+}
+
+#orderstate .mt {
+	padding: 4px 8px;
+	height: 25px;
+	line-height: 25px;
+	border-bottom: 1px dotted #EED97C;
+}
+
+#orderstate .mc {
+	padding: 10px 8px;
+}
+
+#ordertrack {
+	margin-top: -20px; border : 1px solid #EED97C;
+	border-top: 0;
+	padding: 0 5px;
+	position: relative;
+	border: 1px solid #EED97C;
+}
+
+table {
+	font-size: 12px;
+	margin: 10px
+}
+
+table tr th {
+	text-align: left;
+}
+
+#ordertrack td {
+	padding: 2px 0;
+}
+
+#ordertrack th strong {
+	display: block;
+	padding-bottom: 3px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #DBDBDB;
+	text-align: left;
+}
+
+#ordertrack iframe {
+	margin: 2px;
+}

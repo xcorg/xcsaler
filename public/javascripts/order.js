@@ -152,14 +152,16 @@ $(document).ready(function() {
     
     $("#submitDate").change(function(){
         var date = $(this).val();
-        load("#myorderbody","/UserHomeViews/orderView?p=1&date=" + date);
+        load("#myorderbody", orderViewUrl + "?p=1&date=" + date);
     });
     
     $("#orderState").change(function(){
         var state = $(this).val();
-        load("#myorderbody","/UserHomeViews/orderView?p=1&state=" + state);
+        load("#myorderbody", orderViewUrl + "?p=1&state=" + state);
     });
 });
+
+var orderViewUrl = '/Order/uView';
 
 function searchOrder(){
     var orderKey = $("#orderKey").val();
@@ -167,5 +169,5 @@ function searchOrder(){
         return;
     }
     
-    load("#myorderbody","/UserHomeViews/orderView?p=1&orderKey=" + orderKey);
+    load("#myorderbody", orderViewUrl + "?p=1&orderKey=" + orderKey);
 }
