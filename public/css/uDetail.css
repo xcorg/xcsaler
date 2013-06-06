@@ -1,5 +1,6 @@
 #orderstate {
-	border: 1px solid #EED97C; padding : 0 5px;
+	border: 1px solid #EED97C;
+	padding: 0 5px;
 	background: #FFFCEB;
 	padding: 0 5px;
 }
@@ -16,11 +17,11 @@
 }
 
 #ordertrack {
-	margin-top: -20px; border : 1px solid #EED97C;
+	margin-top: -20px;
+	border: 1px solid #ddd;
 	border-top: 0;
 	padding: 0 5px;
 	position: relative;
-	border: 1px solid #EED97C;
 }
 
 table {
@@ -46,4 +47,164 @@ table tr th {
 
 #ordertrack iframe {
 	margin: 2px;
+}
+
+#orderinfo,#ordermess {
+	border: 1px solid #DADADA;
+	padding: 0 5px 10px;
+	background: #EDEDED;
+	overflow: visible;
+}
+
+.m,.sm {
+	margin-bottom: 10px;
+}
+
+#orderinfo .mt,#ordermess .mt {
+	padding: 0 8px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+#orderinfo .mc,#ordermess .mc {
+	padding: 5px 8px;
+	background: #fff;
+	overflow: visible;
+}
+
+.mt,.smt {
+	cursor: default;
+}
+
+.m,.mt,.mc,.mb,.sm,.smt,.smc,.smb {
+	overflow: hidden;
+	zoom: 1;
+}
+
+#orderinfo .mc dl.fore {
+	border-top: 0;
+	margin-top: 2px;
+	padding-bottom: 0;
+}
+
+#orderinfo .mc dl.fores {
+	margin-top: 2px;
+	padding-bottom: 0;
+}
+
+#orderinfo .mc dl.fore ul {
+	margin-left: 0;
+}
+
+#orderinfo .mc dl.fores ul {
+	margin-left: 0;
+}
+
+#orderinfo .mc dl {
+	padding: 10px 5px;
+	border-top: 1px solid #EDEDED;
+	margin-bottom: 5px;
+}
+
+dl {
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+#orderinfo .mc dt {
+	margin-bottom: 4px;
+	font-weight: bold;
+}
+
+dd {
+	display: block;
+	-webkit-margin-start: 40px;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+#orderinfo .p-list table {
+	border-collapse: collapse;
+}
+
+#orderinfo .p-list table {
+	border-collapse: collapse;
+	margin-left: -1px;
+	border: solid #DEDEDE;
+	border-width: 0 1px;
+}
+
+#orderinfo .p-list th {
+	padding: 5px;
+	background: #F0F0F0;
+	border-top: 1px solid #DEDEDE;
+	border-bottom: 1px solid #DEDEDE;
+	border-left: 1px solid #F0F0F0;
+	font-weight: normal;
+}
+
+#orderinfo .p-list td {
+	padding: 5px;
+	background: #fff;
+	border-top: 1px solid #DEDEDE;
+	border-bottom: 1px solid #DEDEDE;
+	border-left: 1px solid #F0F0F0;
+	text-align: center;
+}
+
+#orderinfo .total {
+	padding: 15px 10px 0;
+	overflow: hidden;
+	zoom: 1;
+	font-family: arial;
+}
+
+#orderinfo .total ul {
+	float: right;
+	padding: 0 20px 10px 0;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+#orderinfo .total li {
+	overflow: hidden;
+	line-height: 20px;
+}
+
+#orderinfo .total .extra {
+	float: right;
+	padding: 10px 20px 0 0;
+	border-top: 1px solid #ccc;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#orderinfo .total li span {
+	float: left;
+	width: 120px;
+	text-align: right;
+}
+
+.clr {
+	display: block;
+	overflow: hidden;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+
+#orderinfo .total .extra b {
+	font-size: 24px;
 }

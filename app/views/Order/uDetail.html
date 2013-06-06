@@ -103,7 +103,7 @@ input[type="text"] {
 				              <ul class="nav nav-tabs">
 					                <li class="active"><a href="#lA" data-toggle="tab">订单跟踪</a></li>
 					                <li class=""><a href="#lB" data-toggle="tab">付款信息</a></li>
-					                <li class=""><a href="#lC" data-toggle="tab">订单轨迹</a></li>
+					                <!-- <li class=""><a href="#lC" data-toggle="tab">订单轨迹</a></li> -->
 				              </ul>
 				              <div class="tab-content m" id="ordertrack">
 					                <div class="tab-pane active" id="lA">
@@ -187,36 +187,35 @@ input[type="text"] {
 								<strong>订单信息</strong>
 							</div>
 							<div class="mc">
-								<!-- 节能补贴信息 -->
-
 								<!--顾客信息-->
 								<dl class="fore">
 									<dt>收货人信息</dt>
 									<dd>
 										<ul>
-											<li>收&nbsp;货&nbsp;人：薛晨</li>
-											<li>地&nbsp;&nbsp;&nbsp;&nbsp;址：山东烟台市莱山区港城东大街100号 烟台大学文经学院 教学楼2教B区4楼</li>
+											<li>收&nbsp;&nbsp;货&nbsp;&nbsp;人：小张</li>
+											<li>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：山东烟台市莱山区港城东大街100号</li>
 											<li>固定电话：</li>
-											<li>手机号码：18660091150</li>
+											<li>手机号码：18600000000</li>
 											<li>电子邮件：</li>
 										</ul>
 									</dd>
 								</dl>
+								
 								<!--配送、支付方式-->
-								<dl>
+								<dl class="fores">
 									<dt>支付及配送方式</dt>
 									<dd>
 										<ul>
 											<li>支付方式：货到付款</li>
-											<li>运&nbsp;&nbsp;&nbsp;&nbsp;费：￥5.00</li>
+											<li>运&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费：￥5.00</li>
 											<li>送货日期：只工作日送货（双休日、假日不用送）</li>
-
 											<li>配送时间：仅白天送货（8:00至18:00）</li>
 										</ul>
 									</dd>
 								</dl>
+								
 								<!--发票-->
-								<dl>
+								<dl class="fores">
 									<dt>发票信息</dt>
 									<dd>
 										<ul>
@@ -257,140 +256,26 @@ input[type="text"] {
 													<td>10540609</td>
 													<td>
 														<div class="al fl">
-
-															<a class="flk13" target="_blank" href="http://item.jd.com/10540609.html" clstag="click|keycount|orderinfo|product_name">
-																胎教每天一页（彩版）</a>
-
+															<a class="flk13" target="_blank" href="" >	金士顿（Kingston）16GB Class4 TF(Micro SD)存储卡（SDC4/16GBSP）</a>
 														</div>
 														<div class="clr"></div>
 														<div id="coupon_10540609" class="fl"></div>
 													</td>
-													<td><span class="ftx04"> ￥17.30</span></td>
+													<td><em class="amount"> ￥17.30</em></td>
 													<td>0</td>
 													<td>1</td>
-													<td><span id="iwo10540609" class="flk13"><a target="_blank"
-															href="http://club.jd.com/mycomments.aspx?oid=545517851&amp;pid=10540609" clstag="click|keycount|orderinfo|product_comment">评价</a>|<a
-															clstag="click|keycount|orderinfo|product_show" href="http://club.jd.com/orderbbs/10540609-1.html?orderId=545517851"
-															target="_blank">晒单</a> <br> <a href="http://myjd.jd.com/repair/ordersearchlist.action?searchString=545517851"
-															target="_blank" clstag="click|keycount|orderinfo|product_repair">申请返修/退换货</a> </span> <a class="btn-again"
-														clstag="click|keycount|orderlist|buy" href="http://jd2008.jd.com/purchase/InitCart.aspx?pid=10540609&amp;pcount=1&amp;ptype=1"
-														target="_blank">还要买</a></td>
+													<td>
+														<span id="iwo10540609" class="flk13">
+															<a target="_blank"	href="">评价</a>
+														</span>
+														<br/>
+														<a class="btn btn-small" href="" target="_blank" style="margin: 5px 0;">还要买</a>
+													</td>
 												</tr>
 											</tbody>
 										</table>
 									</dd>
 								</dl>
-								<script type="text/javascript">
-                                    $(document).ready(function() {
-                                        var orderId = "545517851";
-                                        showWareComments(orderId);
-                                    });
-
-                                    function showWareComments(orderId) {
-                                        var ajaxPath = "http://club.jd.com/index.php";
-                                        jQuery
-                                                .ajax({
-                                                    type : "GET",
-                                                    url : ajaxPath,
-                                                    data : "mod=ProductComment&action=getListOrderWareState&orderId=" + orderId,
-                                                    dataType : "jsonp",
-                                                    cache : false,
-                                                    success : function(result) {
-                                                        jQuery
-                                                                .each(
-                                                                        result.content,
-                                                                        function(idx, item) {
-                                                                            var aa = $("#iwo" + item.wareId + "");
-                                                                            if (item.isAppraise && item.isShare) {
-                                                                                aa
-                                                                                        .prepend(
-                                                                                                "<a clstag='click|keycount|orderinfo|product_show' href='http://club.jd.com/orderbbs/"
-                                                                                                        + item.wareId
-                                                                                                        + "-1.html?orderId=545517851' target='_blank'>晒单</a>")
-                                                                                        .prepend(
-                                                                                                "<a target='_blank' href='http://club.jd.com/mycomments.aspx?oid=545517851&pid="
-                                                                                                        + item.wareId
-                                                                                                        + "' clstag='click|keycount|orderinfo|product_comment'>评价</a>|");
-                                                                            } else if (!item.isAppraise && item.isShare) {
-                                                                                aa
-                                                                                        .prepend(
-                                                                                                "<a clstag='click|keycount|orderinfo|product_show' href='http://club.jd.com/orderbbs/"
-                                                                                                        + item.wareId
-                                                                                                        + "-1.html?orderId=545517851' target='_blank'>晒单</a>")
-                                                                                        .prepend(
-                                                                                                "<a target='_blank' href='http://club.jd.com/repay/" + item.wareId + "_" + item.productCommentID + "_1.html' clstag='click|keycount|orderinfo|product_comment'>查看评价</a>|");
-                                                                            } else if (item.isAppraise && !item.isShare) {
-                                                                                aa
-                                                                                        .prepend(
-                                                                                                "<a href='http://club.jd.com/bbsDetail/" + item.wareId + "_" + item.orderCommentID + "_1.html' rel=nofollow target=_blank>查看晒单</a>")
-                                                                                        .prepend(
-                                                                                                "<a target='_blank' href='http://club.jd.com/mycomments.aspx?oid=545517851&pid="
-                                                                                                        + item.wareId
-                                                                                                        + "' clstag='click|keycount|orderinfo|product_comment'>评价</a>|");
-                                                                            } else if (!item.isAppraise && !item.isShare) {
-                                                                                if (!typeof (item.orderCommentID) == "undefined"
-                                                                                        && !typeof (item.productCommentID) == "undefined") {
-                                                                                    aa
-                                                                                            .prepend(
-                                                                                                    "<a href='http://club.jd.com/bbsDetail/" + item.wareId + "_" + item.orderCommentID + "_1.html' rel=nofollow target=_blank>查看晒单</a>")
-                                                                                            .prepend(
-                                                                                                    "<a target='_blank' href='http://club.jd.com/repay/" + item.wareId + "_" + item.productCommentID + "_1.html' clstag='click|keycount|orderinfo|product_comment'>查看评价</a>|");
-                                                                                }
-                                                                            }
-                                                                        });
-                                                    }
-                                                });
-                                    }
-                                </script>
-								<!--条形码-->
-								<div id="barcode">
-									<span class="ftx13 fl">查看条形码</span>
-									<ul id="sn_list" class="hide"></ul>
-								</div>
-								<script type="text/javascript">
-                                    $(document).ready(function() {
-
-                                        var sn_list = $("#sn_list");
-                                        $("#barcode").bind('mouseover', function() {
-                                            if (sn_list.html().length > 0) {
-                                                sn_list.show();
-                                            } else {
-                                                getSnCode();
-                                                sn_list.show();
-                                            }
-                                        });
-                                        $("#barcode").bind('mouseout', function() {
-                                            sn_list.hide()
-                                        });
-                                    });
-
-                                    function getSnCode() {
-                                        var orderId = "545517851";
-                                        var wareIds = "10540609";
-                                        if (wareIds.length == 0) {
-                                            return;
-                                        }
-                                        var ajaxPath = "http://order.jd.com/lazy/getSnCode.action"
-                                        jQuery.ajax({
-                                            type : "POST",
-                                            url : ajaxPath,
-                                            data : "orderId=" + orderId + "&wareIds=" + wareIds,
-                                            dataType : "json",
-                                            cache : false,
-                                            success : function(result) {
-                                                var html = "";
-                                                jQuery.each(result, function(idx, item) {
-                                                    html += "<li>商品编号：";
-                                                    html += item.productId;
-                                                    html += "&nbsp;&nbsp;&nbsp;&nbsp;条形码：";
-                                                    html += item.snCode;
-                                                    html += "</li>";
-                                                });
-                                                $("#sn_list").html(html);
-                                            }
-                                        });
-                                    }
-                                </script>
 							</div>
 							<!--金额-->
 							<div class="total">
@@ -400,9 +285,9 @@ input[type="text"] {
 									<li><span>- 优惠：</span>￥0.00</li>
 									<li><span>- 余额：</span>￥0.00</li>
 								</ul>
-								<span class="clr">ad</span> <span style="color: #EDEDED;"></span>
+								<span class="clr">ad</span>
 								<div class="extra">
-									应付金额：<span class="ftx04"><b>￥22.30</b></span>
+									应付金额：<em class="amount"><b>￥22.30</b></em>
 								</div>
 							</div>
 						</div>
