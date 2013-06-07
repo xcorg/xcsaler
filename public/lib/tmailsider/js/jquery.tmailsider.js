@@ -5,6 +5,8 @@
         var opts = $.extend({}, $.fn.Z_TMAIL_SIDER.defaults, options);
         var base = this;
         var target = opts.target;
+        var oldPosition = $(base).css('position');
+        var oldTop = $(base).css('top');
         var Z_MenuList = $(base).find('.Z_MenuList');
         var Z_SubList = $(base).find('.Z_SubList');
 
@@ -114,8 +116,9 @@
         function initPosition() {
             if ($(base).css('position') == 'absolute') {
                 $(base).css({
-                    top : $(target).offset().top,
-                    left : $(target).offset().left - $(base).width()
+                    top : 6,
+                    //top : $(target).offset().top,
+                    //left : $(target).offset().left - $(base).width()
                 }).show();
 
                 $(Z_SubList).css({
@@ -126,7 +129,7 @@
             if ($(base).css('position') == 'fixed') {
                 $(base).css({
                     top : opts.fTop,
-                    left : $(target).offset().left - $(base).width()
+                    //left : $(target).offset().left - $(base).width()
                 }).show();
 
                 $(Z_SubList).css({
@@ -166,13 +169,21 @@
             if (isIE6)
                 return;
             clearTimeout(scrollTimeOut);
+            
             var sTop = $(window).scrollTop();
+            var newTop = opts.cTop - sTop;
+            $(base).css('top', newTop);
+            
             if (sTop >= opts.cTop) {
+                //$(base).css({'position':'fixed !important', 'top':'0px'});
+                $(base).css({'top':'0px'});
                 var l = parseInt((sTop - opts.fTop - opts.cTop) / opts.unitHeight);
                 scrollTimeOut = setTimeout(function() {
                     OpenOrCloseMenu(l);
                 }, 200);
             } else {
+                //$(base).css({'position':oldPosition, 'top':oldTop});
+                //$(base).css({'top':oldTop}); oldTop=auto
                 scrollTimeOut = setTimeout(function() {
                     OpenOrCloseMenu(0);
                 }, 200);
@@ -183,8 +194,8 @@
     // 默认配置项
     $.fn.Z_TMAIL_SIDER.defaults = {
         target : $('#Z_RightSide'),
-        fTop : 60, // 距离顶部距离
-        cTop : 100, // 滚动条滚动多少像素后开始折叠的高度
+        fTop : $('#Z_RightSide').offset().top, // 距离顶部距离 60
+        cTop : $('#Z_RightSide').offset().top, // 滚动条滚动多少像素后开始折叠的高度 100
         unitHeight : 80, // 每滚动多少距离折叠一个
         autoExpan : true
     };

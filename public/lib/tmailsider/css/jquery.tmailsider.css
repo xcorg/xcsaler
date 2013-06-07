@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* Z_TypeList */
+/*.Z_TypeList{width:238px;position:absolute !important;_position:absolute;overflow:visible;display:block;z-index:10000;border-bottom:1px solid #cccccc;}*/
 .Z_TypeList{width:238px;position:fixed !important;_position:absolute;overflow:visible;display:block;z-index:10000;border-bottom:1px solid #cccccc;}
 .Z_TypeList .title{position:relative;font-weight:bold;font-family:Microsoft YaHei;font-size:13px;color:#ffffff;background-color:rgb(162, 28, 29);height:30px;line-height:30px;padding-left:15px;padding-right:8px;}
 .Z_TypeList .Z_MenuList{width:238px;overflow:hidden;}
@@ -70,6 +71,6 @@ a:hover{color:#990000;}
 body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";background:url('/public/lib/tmailsider/images/bg_html.jpg') top center repeat #140a04;}
 /* yourweb_container */
 .yourweb_container{width:1156px;margin:0 auto;}
-.sidebar{width:918px;float:right;height:2600px;background:repeat-y url('/public/lib/tmailsider/images/bg_line_t.jpg') #ffffff;}
+.sidebar{width:auto;min-width:74%;float:right;height:2600px;background:repeat-y url('/public/lib/tmailsider/images/bg_line_t.jpg') #ffffff;}
 .sidebar h1{font-size:16px;font-family:'微软雅黑';padding:10px 20px;}
 .sidebar p{padding:10px 20px;font-size:14px;}

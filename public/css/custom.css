@@ -32,7 +32,7 @@
 	vertical-align: middle !important;
 }
 
-#top_bar {height:26px;line-height:26px;font-size:11px;background:#e6e6e6;border-bottom:1px solid #ccc}
+/*#top_bar {height:26px;line-height:26px;font-size:11px;background:#e6e6e6;border-bottom:1px solid #ccc}*/
 #top_bar li {display:inline;padding-right:6px;line-height:26px}
 #top_bar li.sep {border-right:1px solid #ccc;margin-right:4px;}
 		

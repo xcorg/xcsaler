@@ -5,6 +5,7 @@
 # Home page
 #GET     /                                       Application.index
 GET     /                                       Home.index
+GET     /maincontent                            Home.mainContent
 
 # 用户首页
 GET     /myhome                                 UserHome.index

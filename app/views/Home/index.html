@@ -1,47 +1,92 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>${appConfig?.title}</title>
-	<meta name="description" content="${appConfig?.description}" />
-	<meta name="keywords" content="${appConfig?.keywords}"/>
-	<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon"/>
-	<link rel="stylesheet" type="text/css" href="/public/lib/tmailsider/css/jquery.tmailsider.css" />
-	<link rel="stylesheet" type="text/css" href="/public/css/style.css"></link>
-	<link rel="stylesheet" type="text/css" href="/public/css/custom.css" />
-	<script type="text/javascript" src="/public/lib/jquery/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="/public/javascripts/ajax.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${appConfig?.title}</title>
+<meta name="description" content="${appConfig?.description}" />
+<meta name="keywords" content="${appConfig?.keywords}" />
+<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/public/lib/bootstrap/css/bootstrap.min.css"></link>
+<!-- <link rel="stylesheet" type="text/css" href="/public/lib/bootstrap/css/bootstrap-responsive.min.css"></link> -->
+<link rel="stylesheet" type="text/css" href="/public/lib/bootstrap/css/layoutit.css"></link>
+<link rel="stylesheet" type="text/css" href="/public/lib/tmailsider/css/jquery.tmailsider.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/style.css"></link>
+<link rel="stylesheet" type="text/css" href="/public/css/custom.css" />
+<script type="text/javascript" src="/public/lib/jquery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/public/javascripts/ajax.js"></script>
+<style>
+.row-fluid{border:0;margin:0;padding: 5px 0 0;}
+</style>
 </head>
 <body>
-        <!-- top bar -->
-        <div id="top_bar">
-            <div class="wrapper">
-                 #{include 'tags/top_bar.html'/}
-            </div>
-        </div>
-	<div class="yourweb_container">
-		<div style="height:60px;overflow:hidden;"></div>
-		<div id="Z_RightSide" class="sidebar">
-			<h1>仿天猫导航</h1>
-			<p></p>
+	<div class="container-fluid" style="padding:0 15px 0 20px;">
+		<div class="row-fluid">
+			<div class="span12">
+				<div id="top_bar" class="row-fluid">
+					<div class="span12">#{include 'tags/top_bar.html'/}</div>
+				</div>
+			</div>
 		</div>
-	</div><!--yourweb_container end-->
-	
-	<div id="Z_TypeList" class="Z_TypeList">
+		<div class="row-fluid">
+			<div class="span3">
+				<div id="Z_TypeList" class="Z_TypeList Z_TypeList1">
+					<h1 class="title">所有商品分类</h1>
+					<div class="Z_MenuList">
+						<ul style="margin:0;">
+							<script>
+	                            load('.Z_MenuList ul', '/topclass');
+	                        </script>
+						</ul>
+					</div>
+					<div class="Z_SubList">
+						<script>
+	                        load('.Z_SubList', '/allclass');
+	                    </script>
+					</div>
+				</div>
+			</div>
+			<div class="span9" style="margin-left:238px;width:auto;height:1500px;">
+				<!-- <div style="height:1px;overflow:hidden;"></div> -->
+				<div id="Z_RightSide" class="sidebar">
+					<script>
+	                    load('#Z_RightSide', '/maincontent');
+	                </script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- top bar -->
+	*{
+	<div id="top_bar" class="span12">
+		<div class="wrapper">#{include 'tags/top_bar.html'/}</div>
+	</div>
+	<div class="span9 yourweb_container">
+		<div style="height: 60px; overflow: hidden;"></div>
+		<div id="Z_RightSide" class="sidebar">
+			<script>
+                load('#Z_RightSide', '/maincontent');
+            </script>
+		</div>
+	</div>
+	<!--yourweb_container end-->
+
+	<div id="Z_TypeList" class="span3 Z_TypeList">
 		<h1 class="title">所有商品分类</h1>
 		<div class="Z_MenuList">
 			<ul>
 				<script>
-					load('.Z_MenuList ul','/topclass');
-				</script>
+                    load('.Z_MenuList ul', '/topclass');
+                </script>
 			</ul>
 		</div>
 		<div class="Z_SubList">
 			<script>
-				load('.Z_SubList','/allclass');
-			</script>
-		</div>		
+                load('.Z_SubList', '/allclass');
+            </script>
+		</div>
 	</div>
+	}*
 	<!--[if IE 6]>
 	<script type="text/javascript" src="/public/lib/tmailsider/js/DD_belatedPNG.js"></script>
 	<script type="text/javascript">
@@ -50,14 +95,14 @@
 		});
 	</script>
 	<![endif]-->
-	
+
 	<script type="text/javascript" src="@{'/public/javascripts/head.load.min.js'}"></script>
 	<script type="text/javascript" src="/public/lib/tmailsider/js/jquery.tmailsider.js"></script>
 	<script type="text/javascript">
-		head.js("/public/javascripts/ajax.js");
-		head.ready(function(){
-		    $('#Z_TypeList').Z_TMAIL_SIDER();
-		});
-	</script>
+        head.js("/public/javascripts/ajax.js");
+        head.ready(function() {
+            $('#Z_TypeList').Z_TMAIL_SIDER();
+        });
+    </script>
 </body>
 </html>

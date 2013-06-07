@@ -9,6 +9,10 @@ public class Home extends Controller {
         PohAppConfig appConfig = PohAppConfig.appConfig();
         render(appConfig);
     }
+    
+    public static void mainContent(){
+        render();
+    }
 
     /**
      * 取得首页的推荐商品

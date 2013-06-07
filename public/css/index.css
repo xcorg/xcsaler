@@ -1,0 +1,257 @@
+.floor-loading {
+	background: url(/public/images/loader.gif) no-repeat scroll 50% 50%;
+}
+
+.floor {
+	width: 950px;
+	height: 358px;
+	clear: both;
+	margin-bottom: 10px;
+	overflow: hidden;
+	background: #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.floor h2 {
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 2px solid #000;
+	font-size: 18px;
+	overflow: hidden;
+	position: relative;
+	padding-left: 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+.floor h2 s {
+	display: block;
+	width: 120px;
+	height: 36px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.floor h2 s,.floorTop-tab b {
+	background:
+		url(http://img04.taobaocdn.com/tps/i4/T1F92RXdxhXXa86zbq-145-290.png)
+		no-repeat;
+}
+
+.floorTop {
+	float: right;
+	height: 36px;
+	width: 80%;
+	line-height: 36px;
+	margin-top: -38px;
+	position: relative;
+}
+
+.floorTop-nav {
+	float: right;
+	height: 34px;
+	width: 520px;
+	overflow: hidden;
+	text-align: right;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+.floorTop-nav li {
+	display: inline-block;
+	margin-right: -1px;
+}
+
+.floorTop-nav a {
+	color: #929292;
+	border-right: 1px solid #dfdfdf;
+	padding: 0 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.floorCon {
+	height: 320px;
+	overflow: hidden;
+	width: 970px;
+}
+
+.headerCon,.clearfix {
+	zoom: 1;
+}
+
+.clearfix {
+	
+}
+
+.floorCon-logo {
+	position: relative;
+	height: 320px;
+	width: 120px;
+	float: left;
+	overflow: hidden;
+}
+
+.fCl-slide {
+	height: 299px;
+}
+
+.floorCon-logo a {
+	display: block;
+	height: 59px;
+	line-height: 59px;
+	width: 120px;
+	border-bottom: 1px solid #f2f2f2;
+	text-align: center;
+	color: #666;
+	overflow: hidden;
+}
+
+.floorCon-logo a img {
+	margin-top: 7px;
+}
+
+img {
+	vertical-align: top;
+}
+
+fieldset,img {
+	border: 0;
+}
+
+.fCl-nav {
+	background: #fff;
+	position: absolute;
+	bottom: 0;
+	padding: 0 33px;
+}
+
+.ui-slide-nav-mini {
+	height: 24px;
+	line-height: 18px;
+}
+
+.fCl-nav li {
+	color: #b2b2b2;
+}
+
+.ui-slide-nav-mini li {
+	float: left;
+	width: 12px;
+	font-family: Tahoma, Helvetica;
+	font-size: 28px;
+	_font-size: 38px;
+	margin-right: 5px;
+	color: #716564;
+	cursor: pointer;
+}
+
+.floorCon-slide {
+	position: relative;
+	width: 200px;
+	height: 320px;
+}
+
+.floorCon-slide,.floorCon-banner {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+.fCs-con li {
+	width: 200px;
+	height: 320px;
+}
+
+.floorCon-banner {
+	padding-top: 10px;
+	position: relative;
+}
+
+.floorCon-slide,.floorCon-banner {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+#floor1 .floorCon-img,#floor4 .floorCon-img {
+	width: 210px;
+}
+
+.floorCon-img {
+	float: left;
+	position: relative;
+	width: 635px;
+	height: 300px;
+	margin: 10px 0 10px -10px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.floorCon-img .floorPro {
+	position: relative;
+	height: 150px;
+	width: 200px;
+	margin-left: 10px;
+	float: left;
+	_display: inline;
+	border-right: 1px dotted #ccc;
+	border-bottom: 1px dotted #ccc;
+	overflow: hidden;
+}
+
+.floorCon-img .floorPro-list {
+	position: absolute;
+	width: 85px;
+	top: 13px;
+	left: 25px;
+	font-family: 'Lucida Grande', '\5fae\8f6f\96c5\9ed1';
+}
+
+.floorCon-img em {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+}
+
+.floorCon-img .floorPro-list a {
+	display: block;
+	font-weight: normal;
+	margin-top: 10px;
+	color: #666;
+}
+
+.floorCon-img a.floorPro-img {
+	-webkit-transition: all .3s ease-in-out .2s;
+	-moz-transition: all .3s ease-in-out .2s;
+	-o-transition: all .3s ease-in-out .2s;
+	-ms-transition: all .3s ease-in-out .2s;
+	transition: all .3s ease-in-out .2s;
+	position: relative;
+	z-index: 2;
+}
+
+.floorCon-img a.floorPro-img {
+	display: block;
+	width: 250px;
+	height: 150px;
+	margin-left: 110px;
+	font-weight: normal;
+	color: #666;
+	font-family: 'Lucida Grande', '\5fae\8f6f\96c5\9ed1';
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.Z_MenuList ul,.Z_MenuList p{margin:0;}
+.container-fluid{}

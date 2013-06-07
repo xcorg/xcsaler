@@ -68,17 +68,10 @@ form .msg_box label {
 	background:#f7f7f7;
 }
 .headerTopArea .headerTop {
-	width:1000px;
-	height:31px;
-	line-height:32px;
-	margin:0 auto;
-	_overflow:hidden;
-}
-.headerTopArea .headerTop {
 	width:980px;
 	height:31px;
 	line-height:32px;
-	margin:0 auto;
+	margin:0 106px;
 	_overflow:hidden;
 	background:#f7f7f7;
 }
@@ -111,11 +104,7 @@ form .msg_box label {
 	padding-right:9px;
 }
 .headerTopArea .headerTopRight {
-	width:438px;
-	float:right;
-}
-.headerTopRight {
-	width:157px;
+	width:100px;
 	float:right;
 	position:relative;
 	z-index:10;

@@ -167,7 +167,7 @@ function load(target, url, callback, async, isPost) {
         return; // 解决ie浏览器url为空也进来
     }
     try {
-        $(target).html('<img src="/public/images/ajax-loader.gif"/>');
+        $(target).html('<img src="/public/images/loader.gif"/>');
     } catch (e) {
         alert('change ajax-loader.gif error.Target:' + target + ',$Target:' + $(target) + ',HTML:' + $(target).html() + ',e:' + e);
         throw e;
