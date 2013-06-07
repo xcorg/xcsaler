@@ -3,7 +3,7 @@
 }
 
 .floor {
-	width: 950px;
+	width: auto;
 	height: 358px;
 	clear: both;
 	margin-bottom: 10px;
@@ -80,7 +80,7 @@ a {
 .floorCon {
 	height: 320px;
 	overflow: hidden;
-	width: 970px;
+	width: auto;
 }
 
 .headerCon,.clearfix {
