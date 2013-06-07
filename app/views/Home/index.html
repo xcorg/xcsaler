@@ -23,14 +23,12 @@
 		<div class="row-fluid">
 			<div class="span12">
 				<div id="top_bar" class="row-fluid">
-					<!-- top bar -->
 					<div class="span12">#{include 'tags/top_bar.html'/}</div>
 				</div>
 			</div>
 		</div>
 		<div class="row-fluid">
 			<div class="span3">
-				<!-- left menu -->
 				<div id="Z_TypeList" class="Z_TypeList Z_TypeList1">
 					<h1 class="title">所有商品分类</h1>
 					<div class="Z_MenuList">
@@ -47,10 +45,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="span9" style="margin-left:238px;width:auto;height:1500px;">
+			<div class="span9" style="margin-left:238px;width:auto;min-width:82.5%;height:1500px;">
 				<!-- <div style="height:1px;overflow:hidden;"></div> -->
-				<!-- main content -->
-				<div id="Z_RightSide" class="sidebar">
+				<div id="Z_RightSide" class="sidebar" style="min-width:100%;">
 					<script>
 	                    load('#Z_RightSide', '/maincontent');
 	                </script>
@@ -58,7 +55,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!--[if IE 6]>
 	<script type="text/javascript" src="/public/lib/tmailsider/js/DD_belatedPNG.js"></script>
 	<script type="text/javascript">
