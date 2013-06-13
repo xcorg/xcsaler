@@ -7,6 +7,11 @@
 GET     /                                       Home.index
 GET     /maincontent                            Home.mainContent
 
+#用户注册
+GET     /initreg                                Register.initreg
+POST    /reguser                                Register.reguser
+POST    /regshop                                Register.regshop
+
 # 用户首页
 GET     /myhome                                 UserHome.index
 GET     /mywelcome                              UserHome.welcome

@@ -24,16 +24,15 @@ img {border: medium none;vertical-align: top;}
 .loginMain .form {width: 322px;margin: 14px 28px 0;overflow: hidden;}
 .loginMain .form dl {clear: both;margin-bottom: 4px;padding-top: 2px;overflow: hidden;}
 .loginMain .form dl dt {float: left;padding: 3px 4px 0 0;font-size: 14px;}
-.loginMain .form dl dd {float: left;width: 250px;margin-bottom: 16px;min-height: 37px;_height: 37px;}
+.loginMain .form dl dd {float: left;width: 250px;margin-bottom: 16px;min-height: 47px;_height: 47px;}
+.loginMain .form dl dd {display:inline-block;margin:0;}
 .loginMain .form .uiText {width: 250px;height: 23px;line-height: 23px;}
 .loginMain .form dl dd .iptTip {position: relative;margin-top: 4px;margin-bottom: -18px;_margin-bottom: -18px;padding-left: 0;color: #D00;}
 .loginMain .form .loginSubmit dd {margin-bottom: 0;}
 .loginMain .form .loginSubmit dd {padding-left: 56px;}
-.loginMain .form dl dd {float: left;width: 250px;margin-bottom: 16px;min-height: 37px;_height: 37px;}
 .loginMain .form .loginSubmit .uiBtn {margin-right: 16px;padding-left: 30px;}
 .loginMain .form a {color: #057BD2;}
 .loginMain .form .loginSubmit dd {margin-bottom: 0;}
-.loginMain .form dl dd {float: left;width: 250px;margin-bottom: 16px;min-height: 37px;_height: 37px;}
 .clear {clear: both;display: block;height: 0;overflow: hidden;font-size: 0;}
 .loginMain .bottShadow {clear: both;width: 366px;height: 20px;margin-top: 1px;background: url(/public/images/acc_bg.png) no-repeat;}
 .iptTip .tipFalse {background-position: -40px -160px;}

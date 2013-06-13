@@ -1,0 +1,2341 @@
+@charset "utf-8"; 
+
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,button,input,textarea,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+body,button,input,select,textarea {
+	font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+}
+
+body {
+	background: #FFF;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+em,i {
+	font-style: normal;
+}
+
+fieldset,img {
+	border: 0;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+	font-size: 0;
+}
+
+button,input,select,textarea {
+	font-size: 100%;
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.hide {
+	display: none;
+}
+
+.l {
+	float: left;
+}
+
+.r {
+	float: right;
+}
+
+a {
+	color: #057BD2;
+}
+
+a:hover {
+	color: #057BD2;
+}
+
+.uiText {
+	width: 170px;
+	height: 20px;
+	padding: 2px;
+	border: 1px solid #BFBFBF;
+	background: url(images/text_bg.png) no-repeat;
+	color: #333;
+	line-height: 20px;
+}
+
+.uiText.focus,.uiText:focus {
+	border: 1px solid #78B9D9 !important;
+}
+
+.uiTxt {
+	padding: 2px;
+	border: 1px solid #CACACA;
+	background: url(images/text_bg.png) no-repeat;
+	color: #4D4D4D;
+	line-height: 1.6;
+	overflow-y: auto;
+}
+
+.uiTxt:focus,.uiTxt.focus {
+	border: 1px solid #78B9D9;
+}
+
+.uiText.uiWrong,.uiTxt.uiWrong {
+	border: 1px solid #E68E8D;
+}
+
+.iptTip {
+	padding-left: 1em;
+	line-height: 22px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.iptTip.txtFalse {
+	color: #D00;
+}
+
+.iptTip.txtOk {
+	color: #55B403;
+}
+
+.iptTip em {
+	position: relative;
+	top: -1px;
+	*top: 0;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+	background: url(/public/images/com_bg.png) no-repeat 0 -160px;
+	vertical-align: middle;
+}
+
+.iptTip .tipOk {
+	background-position: 0 -160px;
+}
+
+.iptTip .tipFalse {
+	background-position: -40px -160px;
+}
+
+.iptTip .tipTip {
+	background-position: -80px -160px;
+}
+
+.tipOk2 {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-right: 6px;
+	background: url(/public/images/com_bg.png) no-repeat 0 -120px;
+	vertical-align: middle;
+}
+
+.safeRank {
+	height: 18px;
+	overflow: hidden;
+}
+
+.safeRank ul {
+	clear: both;
+	margin-top: 3px;
+	overflow: hidden;
+}
+
+.safeRank ul li {
+	float: left;
+	width: 82px;
+	height: 16px;
+	margin-right: 1px;
+	padding: 0;
+	text-align: center;
+	background-color: #efefef;
+	font-size: 12px;
+	color: #fff;
+	vertical-align: middle;
+	line-height: 16px;
+	_line-height: 12px;
+	border: 0 none;
+	overflow: hidden;
+}
+
+.safeRank ul .on1 {
+	background-color: #f00;
+}
+
+.safeRank ul .on2 {
+	background-color: #fc0;
+}
+
+.safeRank ul .on3 {
+	background-color: #00b200;
+}
+
+.uiBtn,.uiBtn span {
+	display: inline-block;
+	height: 32px;
+	padding-left: 26px;
+	background: url(/public/images/com_bg.png) left 0 no-repeat;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.uiBtn span {
+	padding: 0 26px 0 0;
+	background-position: right 0;
+	color: #FFF;
+	font: 14px SimSun;
+	text-align: center;
+	vertical-align: top;
+	font-weight: bold;
+	line-height: 32px;
+}
+
+.uiBtn:hover,.uiBtn:hover span {
+	background-position: left -40px;
+	text-decoration: none;
+}
+
+.uiBtn:hover span {
+	background-position: right -40px;
+}
+
+.uiBtn.b2,.uiBtn.b2 span {
+	height: 26px;
+	padding-left: 1.2em;
+	background-position: left -80px;
+	line-height: 26px;
+	overflow: hidden;
+}
+
+.uiBtn.b2 span {
+	padding: 0 1.2em 0 0;
+	background-position: right -80px;
+	font-size: 12px;
+	color: #333;
+}
+
+.uiBtn.b2:hover,.uiBtn.b2:hover span {
+	background-position: left -80px;
+	text-decoration: none;
+}
+
+.uiBtn.b2:hover span {
+	background-position: right -80px;
+}
+
+#grayLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: .5;
+	filter: Alpha(opacity = 50);
+	z-index: 998;
+}
+
+.uiWin {
+	position: absolute;
+	display: none;
+	width: 440px;
+	left: 50%;
+	margin-left: -225px;
+	border: 2px solid #84C3E3;
+	-moz-box-shadow: 3px 3px 4px #AAA5A1;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135,
+		Color="#AAA5A1");
+	-webkit-box-shadow: 3px 3px 4px #AAA5A1;
+	box-shadow: 3px 3px 4px #AAA5A1;
+	background: #FFF;
+	z-index: 99999;
+}
+
+.uiWin .title {
+	height: 28px;
+	border-bottom: 1px solid #DAEDF7;
+	background: #E3F2F9;
+	line-height: 28px;
+}
+
+.uiWin .title em {
+	float: right;
+}
+
+.uiWin .title .close {
+	position: absolute;
+	display: inline-block;
+	width: 11px;
+	height: 12px;
+	top: 9px;
+	right: 8px;
+	background: url(images/acc_bg.png) -301px -20px no-repeat;
+	text-indent: -999em;
+	overflow: hidden;
+}
+
+.uiWin .title h3 {
+	margin-left: 10px;
+	color: #000;
+	font-size: 14px;
+}
+
+.accPageTip {
+	clear: both;
+	margin-left: 70px;
+	padding-top: 20px;
+}
+
+.accPageTip h2 {
+	padding: 6px 0;
+	border-bottom: 1px solid #CCC;
+}
+
+.accPageTip ul {
+	padding-top: 10px;
+}
+
+.accPageTip ul li {
+	list-style: disc inside;
+	margin-left: 6px;
+	padding-top: 2px;
+	color: #666;
+	line-height: 1.6;
+}
+
+.accPageTip ul li strong {
+	padding: 0 4px;
+	color: #F60;
+}
+
+.wrapper {
+	width: 990px;
+	margin: 0 auto;
+}
+
+.footer {
+	margin-top: 40px;
+	padding-top: 10px;
+	border-top: 1px solid #D5D5D5;
+}
+
+.accWin {
+	position: absolute;
+	left: 50%;
+	width: 590px;
+	margin-left: -295px;
+	border: 5px solid #CCC;
+	background: #FFF;
+	z-index: 10000;
+}
+
+.accWin .title {
+	height: 30px;
+	overflow: hidden;
+}
+
+.accWin .title h2 {
+	float: left;
+	width: 400px;
+	height: 30px;
+	margin-left: 10px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.accWin .title .close {
+	float: right;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 4px;
+	border: 1px solid #CCC;
+	text-align: center;
+	color: #9D9D9D;
+	font-size: 20px;
+	line-height: 18px;
+}
+
+.accWin .title .close:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+#header #headerTopArea .headerMenu li .snCarNav a.cart-z-index {
+	z-index: 100;
+	padding-left: 22px;
+}
+
+#header #headerTopArea #snCarlist {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 22px;
+	width: 320px;
+	background: #fff;
+	border: 1px solid #d8d8d8;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#header #headerTopArea #snCarlist dd {
+	float: left;
+	width: 290px;
+	height: 62px;
+	margin-top: 10px;
+	padding: 0 15px;
+	overflow: hidden;
+}
+
+#header #headerTopArea #snCarlist dd h3 {
+	line-height: 62px;
+	font-size: 14px;
+	color: #666;
+}
+
+#header #headerTopArea #snCarlist dd span {
+	display: block;
+}
+
+#header #headerTopArea #snCarlist dd .p_img {
+	display: inline;
+	float: left;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border: 1px solid #d8d8d8;
+	overflow: hidden;
+}
+
+#header #headerTopArea #snCarlist dd .p_img a {
+	display: inherit;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+	text-align: left;
+	overflow: hidden;
+}
+
+#header #headerTopArea #snCarlist dd .p_name {
+	float: left;
+	width: 220px;
+	margin-top: 3px;
+}
+
+#header #headerTopArea #snCarlist dd .p_name a {
+	text-align: left;
+	height: 32px;
+	line-height: 16px;
+	overflow: hidden;
+}
+
+#header #headerTopArea #snCarlist dd .p_name a em {
+	font-weight: normal;
+	color: #f60;
+}
+
+#header #headerTopArea #snCarlist dd .p_price {
+	display: inline;
+	float: left;
+	width: 210px;
+	padding-top: 3px;
+	margin-left: 10px;
+}
+
+#header #headerTopArea #snCarlist dd .p_price span {
+	float: left;
+	color: #666;
+}
+
+#header #headerTopArea #snCarlist dd .p_price span p {
+	color: #d00;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: tahoma, arial;
+}
+
+#header #headerTopArea #snCarlist dd .p_price span p em {
+	font-size: 12px;
+}
+
+#header #headerTopArea #snCarlist dd .p_price a.mycarDel,#snCarlist dd .p_price a:visited.mycarDel
+	{
+	display: block;
+	float: right;
+	color: #999;
+}
+
+#header #headerTopArea #snCarlist .miniCart {
+	display: inline;
+	float: left;
+	width: 290px;
+	padding: 10px 0;
+	margin: 10px 0 0 15px;
+	border-top: 1px solid #d8d8d8;
+}
+
+#header #headerTopArea #snCarlist .miniCart p {
+	float: left;
+	width: 198px;
+	color: #666;
+}
+
+#header #headerTopArea #snCarlist .miniCart p em {
+	color: #f60;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+#header #headerTopArea #snCarlist .miniCart p span {
+	color: #d00;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+#header #headerTopArea #snCarlist .miniCart p span em {
+	color: #d00;
+}
+
+#header #headerTopArea #snCarlist .miniCart .myminiCar {
+	float: right;
+	width: 82px;
+	height: 22px;
+	padding-top: 1px;
+	background: url(images/btn.png) no-repeat 0 -380px;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+#header {
+	width: 100%;
+}
+
+#header .topAreaBox {
+	height: 30px;
+	background: #F3F3F3;
+	border-bottom: 1px solid #DDD;
+}
+
+#header #headerTopArea {
+	position: relative;
+	width: 990px;
+	margin: 0 auto;
+	height: 22px;
+	line-height: 22px;
+	padding: 3px 0 5px;
+	z-index: 100000;
+}
+
+#header #headerTopArea .HeaderTop1000 {
+	width: 1000px;
+}
+
+#header #headerTopArea p {
+	float: left;
+	color: #000;
+}
+
+#header #headerTopArea p a {
+	color: #666;
+}
+
+#header #headerTopArea p a:hover {
+	color: #f60;
+	text-decoration: underline;
+}
+
+#header #headerTopArea p a.email {
+	color: #006DC8;
+}
+
+#header #headerTopArea p a:hover {
+	color: #f60;
+	text-decoration: underline;
+}
+
+#header #headerTopArea .headerMenu {
+	position: absolute;
+	top: 3px;
+	right: 0;
+}
+
+#header #headerTopArea .headerMenu li {
+	float: left;
+	background: url(images/repeatX.png) no-repeat -2px -245px;
+}
+
+#header #headerTopArea .headerMenu li.noline {
+	background: none;
+}
+
+#header #headerTopArea .headerMenu li.topmycar {
+	position: relative;
+	width: 95px;
+}
+
+#header #headerTopArea .headerMenu li.noNumber {
+	width: 60px;
+	padding-left: 5px;
+}
+
+#header #headerTopArea .headerMenu li.topmycar a {
+	padding-right: 2px;
+}
+
+#header #headerTopArea .headerMenu li.topmycar a em {
+	color: #f60;
+	font-weight: 700;
+}
+
+#header #headerTopArea .headerMenu li.hotline {
+	padding-left: 2px;
+}
+
+#header #headerTopArea .headerMenu li a {
+	display: block;
+	position: relative;
+	padding: 1px 11px 0 10px;
+	text-align: center;
+	color: #333;
+}
+
+#header #headerTopArea .headerMenu li a b {
+	position: absolute;
+	right: 3px;
+	top: 9px;
+	top: 8px\9;
+	_top: 10px;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	border-width: 4px;
+	border-style: solid;
+	border-color: #666 #f3f3f3 #f3f3f3;
+	-moz-transform-origin: 50% 30%;
+	-webkit-transition: -webkit-transform .2s ease-in;
+	-moz-transition: -moz-transform .2s ease-in;
+	-o-transition: -o-transform .2s ease-in;
+	transition: transform .2s ease-in;
+}
+
+#header #headerTopArea .headerMenu li a s,#header #headerTopArea .headerMenu li.noNumber s
+	{
+	position: absolute;
+	left: 5px;
+	top: 6px;
+	width: 12px;
+	height: 11px;
+	background: url(images/btn.png) no-repeat -88px -350px;
+}
+
+#header #headerTopArea .headerMenu li.noNumber s {
+	top: 7px;
+}
+
+#header #headerTopArea .headerMenu li .snCarNav a.hover b,#header #headerTopArea .headerMenu li .mycar a.hover b,#header #headerTopArea .headerMenu li .myhelp a.hover b,#header #headerTopArea .headerMenu li .myweb a.hover b
+	{
+	border-color: #666 #fff #fff;
+	-moz-transform: rotate(180deg);
+	-moz-transform-origin: 50% 30%;
+	-webkit-transform: rotate(180deg);
+	-webkit-transform-origin: 50% 30%;
+	-o-transform: rotate(180deg);
+	-o-transform-origin: 50% 30%;
+	transform: rotate(180deg);
+	transform-origin: 50% 30%;
+	-webkit-transition: -webkit-transform .2s ease-in;
+	-moz-transition: -moz-transform .2s ease-in;
+	-o-transition: -o-transform .2s ease-in;
+	transition: transform .2s ease-in;
+}
+
+#header #headerTopArea .headerMenu li .mycar,#header #headerTopArea .headerMenu li .myhelp,#header #headerTopArea .headerMenu li .myweb
+	{
+	position: relative;
+	z-index: 0;
+}
+
+#header #headerTopArea .headerMenu li .snCarNav a.menuHd,#header #headerTopArea .headerMenu li .mycar a.menuHd,#header #headerTopArea .headerMenu li .myhelp a.menuHd,#header #headerTopArea .headerMenu li .myweb a.menuHd
+	{
+	float: left;
+	padding: 0 15px 0 10px;
+	border: 1px solid #f3f3f3;
+	border-bottom: 0;
+	z-index: 10002;
+}
+
+#header #headerTopArea .headerMenu li .snCarNav a.hover,#header #headerTopArea .headerMenu li .mycar a.hover,#header #headerTopArea .headerMenu li .myhelp a.hover,#header #headerTopArea .headerMenu li .myweb a.hover
+	{
+	border: 1px solid #d8d8d8;
+	border-bottom: 0;
+	background: #fff;
+}
+
+#header #headerTopArea .headerMenu li a:hover {
+	color: #f60;
+	text-decoration: underline;
+}
+
+#header #headerTopArea .headerMenu .mycarlist,#header #headerTopArea .headerMenu .myhelplist,#header #headerTopArea .headerMenu .myweblist
+	{
+	display: none;
+	position: absolute;
+	top: 22px;
+	right: 0;
+	padding: 5px 0 8px 5px;
+	z-index: 10001;
+}
+
+#header #headerTopArea .headerMenu .mycarlist a,#header #headerTopArea .headerMenu .myhelplist a,#header #headerTopArea .headerMenu .myweblist a
+	{
+	text-align: left;
+}
+
+#header #headerTopArea .headerMenu .mycarlist a em {
+	color: #f60;
+	font-weight: 700;
+}
+
+#header #headerTopArea .headerMenu .mycarlist {
+	width: 85px;
+	border: 1px solid #d8d8d8;
+	background: #fff;
+	_right: 72px;
+}
+
+#header #headerTopArea .headerMenu .myhelplist {
+	width: 80px;
+	border: 1px solid #d8d8d8;
+	background: #fff;
+	_right: 72px;
+}
+
+#header #headerTopArea .headerMenu li .myweb a.hover {
+	color: #333;
+	text-decoration: none;
+}
+
+#header #headerTopArea .headerMenu .myweblist {
+	width: 200px;
+	padding-bottom: 10px;
+	border: 1px solid #d8d8d8;
+	background: #fff;
+	_right: 72px;
+}
+
+#header #headerTopArea .headerMenu .myweblist dl {
+	float: left;
+	width: 192px;
+	padding: 2px 3px 5px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+#header #headerTopArea .headerMenu .myweblist dt {
+	float: left;
+	width: 208px;
+	font-weight: 700;
+	padding-left: 8px;
+	color: #999;
+}
+
+#header #headerTopArea .headerMenu .myweblist dd {
+	width: 200px;
+	padding-left: 8px;
+}
+
+#header #headerTopArea .headerMenu .myweblist dd a {
+	float: left;
+	width: 66px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0;
+	overflow: hidden;
+}
+
+#header #headerTopArea .headerMenu .myweblist dd.hover a {
+	width: 100px;
+}
+
+#header #headerTopArea .headerMenu .myweblist span {
+	float: left;
+	margin-top: 5px;
+	padding-left: 8px;
+	color: #333;
+}
+
+#header #headerTopArea .headerMenu .myweblist span em {
+	color: #f60;
+	font-weight: 700;
+}
+
+.hd-layout {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.simpHeader {
+	border-bottom: 3px solid #F18200;
+}
+
+.topBar {
+	height: 30px;
+	background: #F3F3F3;
+	border-bottom: 1px solid #DDD;
+}
+
+.topBar .welcome {
+	line-height: 30px;
+}
+
+.simpHeader .logo {
+	margin: 23px auto 10px;
+}
+
+.loginMain {
+	overflow: hidden;
+}
+
+.loginMain .login {
+	margin-top: 50px;
+}
+
+.loginMain .login .loginBox {
+	width: 364px;
+	border: 1px solid #DDD;
+	background: #F9F9F9;
+	overflow: hidden;
+}
+
+.loginMain .login h2 {
+	margin: 22px 25px 20px;
+	font-size: 14px;
+}
+
+.loginMain .uActive {
+	clear: both;
+	width: 301px;
+	height: 99px;
+	margin: 4px 0 0 28px;
+	background: url(images/acc_bg.png) 0 -20px no-repeat;
+	overflow: hidden;
+}
+
+.loginMain .uActive h5 {
+	padding: 6px 0 10px 1em;
+	font-size: 12px;
+	color: #F18200;
+}
+
+.loginMain .uActive dl {
+	color: #333;
+	font-family: Arial;
+}
+
+.loginMain .uActive dl dt {
+	float: left;
+	height: 60px;
+	padding: 20px 1.5em 0 1em;
+}
+
+.loginMain .form {
+	width: 322px;
+	margin: 14px 28px 0;
+	overflow: hidden;
+}
+
+.loginMain .form a {
+	color: #057BD2;
+}
+
+.loginMain .form dl {
+	clear: both;
+	margin-bottom: 4px;
+	padding-top: 2px;
+	overflow: hidden;
+}
+
+.loginMain .form dl dt {
+	float: left;
+	padding-top: 4px;
+	padding-top: 5px\9;
+	font-size: 14px;
+}
+
+.loginMain .form dl dd {
+	float: left;
+	width: 250px;
+	margin-bottom: 16px;
+	min-height: 37px;
+	_height: 37px;
+}
+
+.loginMain .form dl dd .iptTip {
+	position: relative;
+	margin-top: 4px;
+	margin-bottom: -18px; !
+	margin-bottom: 0;
+	_margin-bottom: -18px;
+	padding-left: 0;
+	color: #D00;
+}
+
+.loginMain .form .uiText {
+	width: 250px;
+	height: 23px;
+	line-height: 23px;
+}
+
+.loginMain .form .checkCode dd {
+	margin-top: -2px;
+}
+
+.loginMain .form .checkCode .uiText {
+	width: 64px;
+	height: 20px;
+	line-height: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+	font: 14px Microsoft YaHei;
+}
+
+.loginMain .form .checkCode img {
+	vertical-align: middle;
+	margin: 0 12px;
+}
+
+.loginMain .form .loginSubmit dd {
+	padding-left: 56px;
+}
+
+.loginMain .form .loginSubmit dd.loading p {
+	padding-left: 20px;
+	height: 16px;
+	line-height: 16px;
+	background: url(images/loading.gif) no-repeat 0 0;
+}
+
+.loginMain .form .loginSubmit .uiBtn {
+	margin: 4px 14px 0 0;
+	padding-left: 30px;
+}
+
+.loginMain .form .loginSubmit .uiBtn span {
+	padding-right: 30px;
+}
+
+.loginMain .login .other {
+	clear: both;
+	margin: 0 25px;
+	padding-bottom: 15px;
+	color: #333;
+	overflow: hidden;
+}
+
+.loginMain .guestLogin {
+	padding: 12px 0 8px;
+}
+
+.loginMain .other p {
+	padding: 10px 0;
+	border-top: 1px dashed #CCC;
+	color: #666;
+}
+
+.loginMain .other a {
+	color: #666;
+}
+
+.loginMain .other a:hover {
+	color: #057BD2;
+}
+
+.loginMain .bottShadow {
+	clear: both;
+	width: 366px;
+	height: 20px;
+	margin-top: 1px;
+	background: url(images/acc_bg.png) no-repeat;
+}
+
+.resetPwd {
+	position: relative;
+	color: #333;
+}
+
+.vCardCheck {
+	position: relative;
+	color: #333;
+}
+
+.stepTitle {
+	margin: 24px 0;
+	font: 22px Microsoft YaHei;
+	color: #333;
+}
+
+.uiStepBox {
+	overflow: hidden;
+}
+
+.uiStepBox .uiStep {
+	width: 975px;
+	height: 33px;
+	background-image: url(images/step_bg.png);
+	line-height: 33px;
+	overflow: hidden;
+}
+
+.uiStepBox .st1 {
+	background-position: 0 0;
+}
+
+.uiStepBox .st2 {
+	background-position: 0 -33px;
+}
+
+.uiStepBox .st3 {
+	background-position: 0 -66px;
+}
+
+.uiStep li {
+	float: left;
+	display: inline;
+	width: 320px;
+}
+
+.uiStep li p {
+	height: 33px;
+	margin-left: 70px;
+	font: 14px Simsun;
+	font-weight: bold;
+	color: #000;
+	line-height: 33px;
+}
+
+.uiStep li.on p {
+	color: #FFF;
+}
+
+.pageStatus {
+	overflow: hidden;
+}
+
+.pageStatus dt {
+	float: left;
+	height: 60px;
+	margin-right: 10px;
+}
+
+.pageStatus dd {
+	float: left;
+	width: 420px;
+}
+
+.pageStatus dd h5 {
+	height: 32px;
+	font: 22px Microsoft YaHei;
+	color: #76A53C;
+	line-height: 32px;
+}
+
+.pageStatus dd p {
+	margin-top: 18px;
+}
+
+.pageStatus dd .uiBtn {
+	margin-top: 12px;
+}
+
+.stepCont {
+	margin: 30px 0 30px 70px;
+	overflow: hidden;
+}
+
+.stepCont .scTip {
+	font-size: 14px;
+}
+
+.scTable {
+	margin-top: 14px;
+}
+
+.scTable th,.scTable td {
+	padding: 8px 0;
+}
+
+.scTable .uiText {
+	width: 220px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.scTable th {
+	font-size: 14px;
+	font-weight: normal;
+	text-align: right;
+	vertical-align: top;
+	padding-top: 12px;
+	padding-top: 13px\9;
+}
+
+.scTable .iptTip em.tipOk {
+	top: 0;
+}
+
+.scTable .checkCode .uiText {
+	width: 80px;
+	height: 20px;
+	line-height: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+	font: 14px Microsoft YaHei;
+	vertical-align: middle;
+}
+
+.scTable .checkCode img {
+	margin: 0 12px;
+	vertical-align: middle;
+}
+
+.scTable .checkCode a {
+	color: #057BD2;
+}
+
+.resetMethod {
+	float: left;
+	width: 600px;
+	margin: 18px 0 10px;
+	padding: 20px;
+	border: 1px solid #CCC;
+	overflow: hidden;
+}
+
+.resetMethod dt {
+	float: left;
+	margin-right: 12px;
+}
+
+.resetMethod dd {
+	float: left;
+	margin-top: -2px;
+	*margin-top: 2px;
+}
+
+.resetMethod dd p {
+	margin-top: 12px;
+}
+
+.tableAction {
+	clear: both;
+	float: left;
+	margin-top: 12px;
+}
+
+.stepCont .emailTip {
+	margin-bottom: 32px;
+}
+
+.stepCont .emailTip strong {
+	color: #057BD2;
+}
+
+.stepCont .callCheck .uiBtn {
+	margin-left: 12px;
+}
+
+.stepCont .callCheck .noActive {
+	background-color: #FFF;
+	opacity: .5;
+	filter: Alpha(opacity = 50);
+	cursor: text;
+}
+
+.stepCont .callCheck .noActive span {
+	cursor: text;
+	color: #777;
+}
+
+.stepCont .callCheck .iptTip {
+	margin-top: 10px;
+	padding-left: 0;
+}
+
+.stepCont .callCheck .iptTip strong {
+	color: #F60;
+}
+
+.stepCont .t240 {
+	width: 243px;
+}
+
+.setPwd .spBox {
+	float: left;
+	width: 252px;
+	margin-right: 2px;
+}
+
+.setPwd .iptTip {
+	float: left;
+	width: 320px;
+	height: 44px;
+	margin-top: 4px;
+	line-height: 18px;
+}
+
+.setPwd .iptTip em {
+	float: left;
+	height: 40px;
+	top: 0;
+	_top: -1px;
+}
+
+.setPwd .iptTip a {
+	font-weight: bold;
+	color: #057BD2;
+}
+
+.stepLast {
+	width: 972px;
+	margin: 14px 0 0 0;
+	border: 1px solid #AED58B;
+	background: #F1FFF5;
+	overflow: hidden;
+}
+
+.stepLast .editProfile {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 400px;
+	height: 74px;
+	padding: 18px;
+	border: 1px solid #CBE7B2;
+	background: #FFF;
+}
+
+.stepLast .editProfile p {
+	margin-bottom: 8px;
+	line-height: 1.8;
+}
+
+.stepLast .editProfile a {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.resetPwd .stepLast .pageStatus {
+	margin: 40px 0 40px 60px;
+}
+
+.resetPwd .stepLast .pageStatus dd p {
+	font-size: 14px;
+}
+
+.pwdSetTip {
+	padding: 20px;
+}
+
+.pwdSetTip p {
+	font-size: 12px;
+	color: #000;
+}
+
+.pwdSetTip ul {
+	margin: 12px;
+	color: #444;
+	line-height: 1.6;
+}
+
+.pwdSetTip .uiBtn {
+	margin: 16px 0 0 160px !important;
+}
+
+.vCardCheck p.iptTip {
+	margin-top: 4px;
+	padding-left: 0;
+}
+
+.vCardTreaty {
+	color: #666;
+}
+
+.vCardTreaty input {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.vCardCheck .stepLast {
+	position: relative;
+}
+
+.vCardCheck .stepLast .pageStatus {
+	margin: 20px;
+}
+
+.vCardCheck .stepLast .pageStatus dd .uiBtn {
+	padding-left: 12px;
+}
+
+.vCardCheck .stepLast .pageStatus dd .uiBtn span {
+	padding-right: 12px;
+}
+
+.vCardCheck .stepLast .vipName strong {
+	padding: 0 4px;
+}
+
+.vCardCheck .editProfile {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 400px;
+	height: 74px;
+	padding: 18px;
+	border: 1px solid #CBE7B2;
+	background: #FFF;
+}
+
+.vCardCheck .editProfile p {
+	margin-bottom: 8px;
+	line-height: 1.8;
+}
+
+.vCardCheck .editProfile a {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.accSafe {
+	clear: both;
+	position: relative;
+	width: 972px;
+	margin-top: 10px;
+	padding-bottom: 30px;
+	border: 1px solid #BDD9E4;
+	background: #F0F9FF;
+	overflow: hidden;
+}
+
+.accSafe h2 {
+	margin: 18px;
+	font-size: 14px;
+}
+
+.accSafe ul {
+	width: 620px;
+	margin: 0 18px;
+}
+
+.accSafe .allWidth {
+	width: 880px;
+}
+
+.accSafe ul li {
+	margin-bottom: 6px;
+	line-height: 1.6;
+}
+
+.accSafe ul li strong {
+	color: #F60;
+	font-size: 14px;
+}
+
+.accSafe ul li em {
+	color: #F60;
+	font-weight: bold;
+}
+
+.accSafe dl {
+	float: left;
+	width: 260px;
+	margin: 24px 100px 0 30px;
+	overflow: hidden;
+}
+
+.accSafe dl dt {
+	float: left;
+	width: 36px;
+	height: 58px;
+	margin-right: 18px;
+	background: url(images/acc_bg.png) no-repeat -330px -20px;
+}
+
+.accSafe dl.asEmail dt {
+	width: 56px;
+	height: 50px;
+	background-position: -310px -90px;
+}
+
+.accSafe dl dd {
+	float: left;
+}
+
+.accSafe dl dd a {
+	font: 22px Microsoft YaHei;
+}
+
+.accSafe dl dd p {
+	margin-top: 12px;
+}
+
+.accSafe .rTop {
+	position: absolute;
+	right: 0;
+	top: 50px;
+	margin-right: 0;
+}
+
+.accBlock {
+	clear: both;
+	width: 972px;
+	margin-top: 10px;
+	border: 1px solid #DFDFDF;
+}
+
+.accBlock .title {
+	height: 34px;
+	margin: 1px;
+	padding-left: 1em;
+	background: #F3F3F3;
+	font-size: 14px;
+	line-height: 34px;
+}
+
+.accBlock .newer {
+	padding: 30px 18px;
+}
+
+.accBlock .recommend {
+	padding: 30px 0 20px 60px;
+	overflow: hidden;
+}
+
+.accBlock .recommend li {
+	display: inline;
+	float: left;
+	width: 160px;
+	height: 250px;
+	margin-right: 68px;
+	overflow: hidden;
+}
+
+.accBlock .recommend li .proName {
+	height: 38px;
+	margin-bottom: 6px;
+	overflow: hidden;
+}
+
+.accBlock .recommend li .proName a {
+	color: #333;
+}
+
+.accBlock .recommend li .proName a:hover {
+	color: #FE6700;
+}
+
+.accBlock .recommend li .proPrice {
+	font-family: Verdana;
+	color: #FE6700;
+	font-weight: bold;
+}
+
+.accReg {
+	position: relative;
+}
+
+.vipCheckTip {
+	height: 33px;
+	margin-bottom: 30px;
+	padding: 7px 0 0 10px;
+	background: #FFF7EA;
+	font-size: 14px;
+	color: #333;
+	border: 1px solid #FFC66E;
+}
+
+.vipCheckTip em {
+	display: inline-block;
+	background: url(images/tip_ico.png) no-repeat left center;
+	width: 16px;
+	height: 12px;
+	margin-right: 5px;
+	*vertical-align: middle;
+}
+
+.vipCheckTip .uiBtn span {
+	font-weight: 700;
+}
+
+.accTab {
+	height: 33px;
+	margin-top: 20px;
+	padding-left: 160px;
+	border-bottom: 1px solid #F18200;
+	_overflow: hidden;
+}
+
+.accTab a {
+	_position: relative;
+	display: inline-block;
+	width: 102px;
+	height: 34px;
+	margin-right: 4px;
+	color: #333;
+	text-align: center;
+	font-size: 14px;
+	line-height: 34px;
+}
+
+.accTab a:hover {
+	color: #333;
+}
+
+.accTab a.on {
+	background: url(images/acc_bg.png) 0 -119px no-repeat;
+	color: #F60;
+	font-weight: bold;
+}
+
+.accTab a.on:hover {
+	color: #F60;
+	text-decoration: none;
+}
+
+.regBox {
+	margin: 30px 0;
+}
+
+.regBox h2 {
+	margin: 8px 0 30px 100px;
+	font-size: 14px;
+}
+
+.regBox h2 em {
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+}
+
+.regBox table {
+	margin: 0 0 80px 100px;
+}
+
+.regBox table th,.regBox table td {
+	padding: 4px 0 20px;
+	vertical-align: top;
+}
+
+.regBox table th {
+	font-size: 14px;
+	padding-top: 8px;
+	padding-top: 9px\9;
+	font-weight: normal;
+	text-align: right;
+}
+
+.regBox table td .uiText {
+	width: 260px;
+	height: 22px;
+	font-size: 14px;
+	vertical-align: middle;
+	line-height: 22px;
+}
+
+.regBox table td.checkCode .uiText {
+	width: 110px;
+	height: 20px;
+	line-height: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+	font: 14px Microsoft YaHei;
+	vertical-align: middle;
+}
+
+.regBox table td.checkCode img {
+	margin: 0 18px;
+	vertical-align: middle;
+}
+
+.regBox table .regTreaty input {
+	margin-right: 6px;
+}
+
+.regBox .regSubmit .uiBtn {
+	padding-left: 14px;
+}
+
+.regBox .regSubmit .uiBtn span {
+	padding-right: 14px;
+}
+
+.regBox .safeRank {
+	margin-bottom: -12px;
+}
+
+.regBox .safeRank li {
+	width: 86px;
+}
+
+.regBox .setPwd .spBox {
+	width: 270px;
+	height: 46px;
+	margin-right: 0;
+}
+
+.resultBox {
+	position: relative;
+}
+
+.resultBox .list {
+	position: absolute;
+	top: 28px;
+	*top: 29px;
+	left: 0;
+	width: 264px;
+	border: 1px solid #78B9D9;
+	border-top: 0 none;
+	background: #FFF;
+}
+
+.resultBox .list li {
+	display: block;
+	height: 20px;
+	padding: 3px 4px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #777;
+	cursor: pointer;
+}
+
+.resultBox .list li:hover,.resultBox .list li.hover {
+	color: #333;
+	background: #F3F3F3;
+}
+
+.accRegOk .stepLast {
+	position: relative;
+	margin-top: 20px;
+}
+
+.telCheck {
+	margin-top: 20px;
+}
+
+.telCheck p {
+	margin: 0 0 24px 40px;
+	font-size: 14px;
+}
+
+.telCheck p em {
+	font-size: 12px;
+	color: #333;
+}
+
+.telCheck .uiText {
+	width: 80px;
+}
+
+.telCheck .iptTip {
+	font-size: 12px;
+}
+
+.telCheck .resend {
+	margin: 0 10px 20px;
+	padding: 12px 0 0 100px;
+	border-top: 1px solid #DDD;
+	line-height: 2.4;
+}
+
+.telCheck .resend .noActive {
+	background-color: #FFF;
+	opacity: .5;
+	filter: Alpha(opacity = 50);
+	cursor: text !important;
+}
+
+.welcome {
+	position: relative;
+	width: 620px;
+	_width: 610px;
+	height: 455px;
+	text-align: center;
+	overflow: hidden;
+	display: table;
+}
+
+.welcome .imgCon {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.welcome p {
+	*position: absolute;
+	top: 50%;
+	left: 50%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.welcome .imgLoad {
+	*position: relative;
+	top: -50%;
+	left: -50%;
+}
+
+.regSubmit .noActive {
+	background-color: #FFF;
+	opacity: .5;
+	filter: Alpha(opacity = 50);
+}
+
+.loading p {
+	padding-left: 20px;
+	height: 16px;
+	line-height: 16px;
+	background: url(images/loading.gif) no-repeat 0 0;
+}
+
+.loadingText {
+	padding-left: 20px;
+	height: 16px;
+	line-height: 16px;
+	background: url(images/loading.gif) no-repeat 0 0;
+	font-size: 12px;
+}
+
+#snlogo {
+	height: 78px;
+	margin: 0 auto;
+	width: 990px;
+	padding-bottom: 20px;
+}
+
+#snlogo a {
+	float: left;
+	margin-top: 15px;
+}
+
+#snlogo .ml10 {
+	margin-left: 10px !important;
+}
+
+.rst .uiStepBox .uiStep {
+	background: url(images/step_bg_reset.png);
+}
+
+.rst .uiStep li {
+	width: 242px;
+}
+
+.rst .uiStepBox .st1 {
+	background-position: 0 0;
+}
+
+.rst .uiStepBox .st2 {
+	background-position: 0 -33px;
+}
+
+.rst .uiStepBox .st3 {
+	background-position: 0 -66px;
+}
+
+.rst .uiStepBox .st4 {
+	background-position: 0 -99px;
+}
+
+.rst .uiStep li p {
+	margin-left: 50px;
+}
+
+.rst .stepCont,.rst .accPageTip {
+	margin-left: 50px;
+}
+
+.rst .stepLast {
+	margin-left: 0;
+}
+
+.rst .stepCont .callCheck .uiBtn {
+	margin-left: 0;
+}
+
+.rst .valInfo {
+	margin-top: 8px;
+}
+
+.rst .scTable {
+	margin-top: 8px;
+}
+
+.caution-box {
+	width: 973px;
+	height: 36px;
+	margin-top: 10px;
+	border: 1px solid #ffcead;
+	background-color: #fff2e1;
+}
+
+.caution-box em {
+	display: inline-block;
+	float: left;
+	width: 33px;
+	height: 29px;
+	margin: 5px 12px 0 10px;
+	background: url(/public/images/com_bg.png) -120px -120px;
+}
+
+.caution-box span {
+	color: #333;
+	font: 400 14px/36px Simsun;
+}
+
+.rst .stepCont .emailVal {
+	margin-bottom: 20px;
+}
+
+.stepCont h3 {
+	position: relative;
+	width: 530px;
+	height: 28px;
+}
+
+.stepCont h3 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	height: 28px;
+	padding-right: 2px;
+	color: #333;
+	font: 700 14px/2em Simsun;
+	background-color: #fff;
+}
+
+.stepCont h3 b {
+	position: absolute;
+	_top: -4px;
+	display: block;
+	float: right;
+	height: 14px;
+	width: 100%;
+	border-bottom: 1px dashed #ccc;
+	zoom: 1;
+}
+
+.stepCont .tomail-link {
+	margin-left: 15px;
+	color: #034bc3;
+}
+
+.stepCont .tomail-link:hover {
+	color: #f60;
+	text-decoration: underline;
+	padding-bottom: 1px;
+}
+
+.stepCont .iptTip {
+	margin-left: 10px;
+}
+
+.stepCont .mobileNum input {
+	width: 120px;
+}
+
+.hasTips input {
+	vertical-align: middle;
+}
+
+.bindAccountTip {
+	padding: 6px 2px 8px 16px;
+	border: 1px solid #FFC66E;
+	background: #FFF7EA;
+	font-size: 14px;
+	line-height: 1.8;
+}
+
+.bindAccountTip em {
+	display: inline-block;
+	float: left;
+	width: 16px;
+	height: 32px;
+	margin: 5px 6px 0 0;
+	background: url(/public/images/com_bg.png) no-repeat -80px -160px;
+	vertical-align: middle;
+}
+
+.bindAccountTip strong {
+	padding: 0 2px;
+	color: #F60;
+}
+
+.bindAccount .iptTip {
+	margin-left: 0;
+}
+
+.bindAccount .iptTip em {
+	margin-top: -2px;
+}
+
+.bindAccount .uiBtn {
+	padding-left: 15px;
+}
+
+.bindAccount .uiBtn span {
+	padding-right: 15px;
+}
+
+.bindAccount .tableAction .otherLink {
+	display: inline-block;
+	margin: 0 4px 0 12px;
+	vertical-align: middle;
+}
+
+.bindAccount .scTable td strong {
+	color: #000;
+}
+
+input {
+	vertical-align: middle;
+}
+
+.form .pTip {
+	position: absolute;
+	left: 55px;
+	top: 82px;
+	_top: 86px;
+	background: url(images/border_bg.png) no-repeat;
+	width: 297px;
+	height: 114px;
+	z-index: 1002;
+	padding: 30px 15px 0;
+	overflow: hidden;
+}
+
+.form .pTip h2 {
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.form .pTip em {
+	display: inline-block;
+	background: url(images/com_ico.png) no-repeat left center;
+	width: 16px;
+	height: 15px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.form .pTip span {
+	vertical-align: middle;
+}
+
+.form .pTip p {
+	line-height: 160%;
+	font-family: "Arial";
+}
+
+.accountTip {
+	color: #666;
+	border-top: 1px dashed #CCC;
+	padding-top: 8px;
+}
+
+.accountTip .iptTip {
+	padding-left: 0;
+}
+
+.no-account {
+	float: right;
+	_height: 28px;
+	margin-right: 0;
+	*margin-top: -22px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.combine-account .stepTitle {
+	margin-bottom: 16px;
+}
+
+.combine-account .caution-box {
+	width: 968px;
+	padding-left: 12px;
+}
+
+.combine-account .caution-box span b {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.combine-account .scTable th,.combine-account .scTable td {
+	padding-top: 12px;
+	*padding-top: 14px;
+	padding-bottom: 16px;
+}
+
+.combine-account .scTable th {
+	padding-top: 10px;
+	*padding-top: 14px;
+}
+
+.combine-account .scTable .tableAction {
+	margin-top: 0;
+}
+
+.combine-account .choose-acc input {
+	margin-right: 2px;
+	vertical-align: -2px;
+}
+
+.combine-account .choose-acc label {
+	padding-right: 14px;
+	font-weight: bold;
+}
+
+.combine-account .choose-acc .iptTip {
+	display: inline-block;
+	margin-top: -3px;
+}
+
+.combine-account .stepCont .iptTip {
+	margin-left: 0;
+}
+
+.acc-account .stepCont {
+	margin-top: 12px;
+}
+
+.acc-account .stepTitle {
+	margin-bottom: 16px;
+}
+
+.acc-account .caution-box {
+	width: 968px;
+	padding-left: 12px;
+}
+
+.acc-account .scTable .accProtocol th {
+	padding-top: 7px;
+	padding-right: 8px;
+}
+
+.login-redbaby {
+	padding: 35px 0;
+	overflow: hidden;
+}
+
+.login-redbaby .lr-form {
+	width: 560px;
+}
+
+.login-redbaby .lr-form h1 {
+	width: 320px;
+	border-bottom: 1px dashed #CCC;
+	padding-bottom: 10px;
+	font: 22px Microsoft YaHei;
+	color: #333;
+}
+
+.login-redbaby .lr-form h1 em {
+	float: right;
+	display: inline-block;
+	width: 90px;
+	height: 33px;
+	*margin-top: -32px;
+	background: url(images/login_redbaby_bg.png?v=20130404) no-repeat;
+}
+
+.login-redbaby .lr-form table {
+	margin-top: 10px;
+}
+
+.login-redbaby .lr-form table th,.login-redbaby .lr-form table td {
+	padding: 8px 0;
+	vertical-align: top;
+}
+
+.login-redbaby .lr-form table th {
+	font-size: 14px;
+	font-weight: normal;
+	padding-top: 11px\0;
+	*padding-top: 11px;
+}
+
+.login-redbaby .lr-form table td .uiText {
+	width: 256px;
+	height: 18px;
+	height: 18px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.login-redbaby .lr-form table .checkCode .uiText {
+	width: 64px;
+	height: 20px;
+	line-height: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+	font: 14px Microsoft YaHei;
+	vertical-align: middle;
+}
+
+.login-redbaby .lr-form table .checkCode img {
+	vertical-align: middle;
+	margin: 0 12px;
+}
+
+.login-redbaby .lr-form table .l-action {
+	position: relative;
+}
+
+.login-redbaby .lr-form table .l-action .losepwd-tip {
+	position: absolute;
+	top: -80px;
+	left: 106px;
+	float: left;
+	width: 380px;
+	border: 1px solid #FFC66E;
+	padding: 6px 10px;
+	background: #FFF7EA;
+	overflow: visible;
+}
+
+.login-redbaby .lr-form table .l-action .losepwd-tip i {
+	position: absolute;
+	bottom: -7px;
+	_top: 72px;
+	left: 20;
+	pxdisplay: block;
+	width: 6px;
+	height: 7px;
+	background: url(images/login_redbaby_bg.png?v=20130404) -40px -80px
+		no-repeat;
+	z-index: 1;
+}
+
+.login-redbaby .lr-msg {
+	position: relative;
+	display: inline;
+	width: 342px;
+	height: 165px;
+	margin-right: 60px;
+	border: 1px solid #FFC66E;
+	background: #FFF7EA;
+}
+
+.login-redbaby .lr-msg i {
+	display: block;
+	position: absolute;
+	top: 70px;
+	left: -9px;
+	width: 9px;
+	height: 15px;
+	background: url(images/login_redbaby_bg.png?v=20130404) 0 -80px
+		no-repeat;
+	z-index: 1;
+}
+
+.login-redbaby .lr-msg h3 {
+	margin: 12px 20px 4px;
+	padding-bottom: 4px;
+	border-bottom: 1px dashed #CCC;
+	color: #F60;
+	font: 20px Microsoft YaHei;
+}
+
+.login-redbaby .lr-msg p {
+	margin: 0 20px 4px;
+	color: #666;
+}
+
+.login-redbaby .lr-msg p a {
+	font-family: SimSun;
+}
+
+.login-icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-right: 4px;
+	background: url(images/login_redbaby_bg.png?v=20130404) 0 -40px
+		no-repeat;
+	vertical-align: middle;
+}
+
+.i-readbaby {
+	background-position: 0 -40px;
+}
+
+.i-tianyi {
+	background-position: -40px -40px;
+}
+
+.redbaby-logo img,.bingo-logo img {
+	display: block;
+	height: 25px;
+	overflow: hidden;
+	text-align: left;
+	font: 12px/18px SimSun;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.login-redbaby .lr-form h1 span {
+	display: block;
+	float: left;
+}
+
+.login-redbaby .lr-form .redbaby-logo {
+	margin: 3px 5px 0 24px;
+	height: 25px;
+	border-right: 1px solid #ddd;
+}
+
+.login-redbaby .lr-form .bingo-logo {
+	margin-top: 3px;
+	height: 25px;
+}
+
+.loginMain .form dl dt {
+	padding: 5px 4px 0 0;
+	font-size: 12px;
+}
+
+.loginMain .form .loginSubmit dd {
+	padding-left: 48px;
+}
+
+.no-account {
+	color: #333;
+}
+
+.no-account .redbaby-logo {
+	float: left;
+	position: relative;
+	top: -4px;
+	left: 3px;
+	z-index: 0;
+}
+
+.regArea {
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	height: 12px;
+	margin-right: 12px;
+	padding-right: 12px;
+	line-height: 12px;
+	font-size: 0;
+	border-right: 1px solid #ddd;
+	z-index: 0;
+}
+
+.loginMain .form .loginSubmit {
+	margin-bottom: 32px;
+}
+
+.loginMain .form .loginSubmit dd {
+	margin-bottom: 0;
+}
+
+.loginMain .form .loginSubmit .uiBtn {
+	margin-right: 16px;
+}
+
+.tiplong {
+	position: absolute;
+	left: 166px;
+	top: 0;
+	display: block;
+	margin-right: 38px;
+	margin-top: 6px;
+	width: 400px;
+}
+
+.tiplong em {
+	float: left;
+	margin-top: 4px;
+}
+
+.tiplong i {
+	float: left;
+	width: 260px;
+	line-height: 18px;
+}
+
+.update-box {
+	width: 973px;
+	height: 36px;
+	margin-top: 10px;
+	padding-left: 10px;
+	border: 1px solid #ffcead;
+	background-color: #fff2e1;
+	overflow: hidden;
+}
+
+.update-box em {
+	float: left;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 10px 5px 0 0;
+	background: url(/public/images/com_bg.png?v=20130502) no-repeat -80px -160px;
+	overflow: hidden;
+}
+
+.update-box span {
+	float: left;
+	display: inline-block;
+	color: #333;
+	font: 400 14px Simsun;
+	margin-top: 10px;
+	margin-top: 11px\9\0;
+	*margin-top: 11px;
+}
