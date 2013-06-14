@@ -954,7 +954,7 @@ a:hover {
 	padding-left: 20px;
 	height: 16px;
 	line-height: 16px;
-	background: url(images/loading.gif) no-repeat 0 0;
+	background: url(/public/images/ajax-loader.gif) no-repeat 0 0;
 }
 
 .loginMain .form .loginSubmit .uiBtn {
@@ -1738,14 +1738,14 @@ a:hover {
 	padding-left: 20px;
 	height: 16px;
 	line-height: 16px;
-	background: url(images/loading.gif) no-repeat 0 0;
+	background: url(/public/images/ajax-loader.gif) no-repeat 0 0;
 }
 
 .loadingText {
 	padding-left: 20px;
 	height: 16px;
 	line-height: 16px;
-	background: url(images/loading.gif) no-repeat 0 0;
+	background: url(/public/images/ajax-loader.gif) no-repeat 0 0;
 	font-size: 12px;
 }
 

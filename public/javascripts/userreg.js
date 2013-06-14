@@ -242,18 +242,18 @@ function checkInputEvnt() {
         case "emailLogonPasswordVerify":
             checkConfirmPwd("p_egoAcctEmailConfirmPwd_info", $("#emailLogonPassword").val(), this.value);
             break;
-        case "emailValCode":
-            checkEgoValidate("p_emailValCode_info", this.value);
-            break;
+        //case "emailValCode":
+        //    checkEgoValidate("p_emailValCode_info", this.value);
+        //    break;
         case "mobileLogonPassword":
             checkPwd("p_egoAcctMobilePwd_info", this.value);
             break;
         case "mobileLogonPasswordVerify":
             checkConfirmPwd("p_egoAcctMobileConfirmPwd_info", $("#mobileLogonPassword").val(), this.value);
             break;
-        case "mobileValCode":
-            checkEgoValidate("p_mobileValCode_info", this.value);
-            break;
+        //case "mobileValCode":
+        //    checkEgoValidate("p_mobileValCode_info", this.value);
+        //    break;
         case "entityCardLogonPassword":
             checkPwd("p_entityCardLogonPassword_info", this.value);
             break;
@@ -306,7 +306,8 @@ function doEmailRegisterSubmit() {
     var g = $("#emailLogonPassword").val();
     var h = $("#emailLogonPasswordVerify").val();
     var e = $("#emailValCode").val();
-    if (!ajaxCheckEmail("p_egoAccountOfEmail_info", f) || !checkEmailOfNormal("p_egoAccountOfEmail_info", f) || !checkPwd("p_egoAcctEmailPwd_info", g) || !checkConfirmPwd("p_egoAcctEmailConfirmPwd_info", g, h) || !checkEgoValidate("p_emailValCode_info", e) || !checkRegisterAgreement("epp_email_checked_error", "epp_email_checked")) {
+    //|| !checkEgoValidate("p_emailValCode_info", e)
+    if (!ajaxCheckEmail("p_egoAccountOfEmail_info", f) || !checkEmailOfNormal("p_egoAccountOfEmail_info", f) || !checkPwd("p_egoAcctEmailPwd_info", g) || !checkConfirmPwd("p_egoAcctEmailConfirmPwd_info", g, h) || !checkRegisterAgreement("epp_email_checked_error", "epp_email_checked")) {
         hideEmailRegProgress();
         return
     }

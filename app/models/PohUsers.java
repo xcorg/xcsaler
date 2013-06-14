@@ -28,7 +28,7 @@ public class PohUsers extends Model implements IUser {
      * 用户真实姓名
      */
     @Required
-    @Column(nullable = false)
+    @Column(nullable = true)
     public String name;
 
     /**

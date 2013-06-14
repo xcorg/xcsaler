@@ -14,7 +14,7 @@
 <script type="text/javascript" src="/public/lib/jquery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="/public/javascripts/userreg.js"></script>
 <script type="text/javascript" src="/public/javascripts/pwd.js"></script>
-<script language="javascript" src="/public/javascripts/headlib.js"></script>
+<script type="text/javascript" src="/public/javascripts/headlib.js"></script>
 <script type="text/javascript">
     $(function() {
         var emailLogonPassword = $("#emailLogonPassword").val();
@@ -75,20 +75,26 @@
 	<div class="accReg wrapper" id="accountReg">
 		<h2 class="stepTitle"></h2>
 		<div class="accTab">
-			<a href="#" class="on" tabindex="16">邮箱注册</a>
+			<!-- <a href="#" class="on" tabindex="16">邮箱注册</a> -->
+			#{if flash.error}
+				<div class="msg_box msg_error">&{flash.error}</div>
+			#{/if} 
+			#{if flash.success}
+				<div class="msg_box msg_ok">&{flash.success}</div>
+			#{/if}
 		</div>
 		<div class="tabCont regBox" style="display: block;">
 			<h2>
 				填写注册信息<em>(除标注可选填外均为必填)</em>
 			</h2>
-			<form action="SNUserRegister" method="post" id="emailRegisterForm">
+			<form action="/reguser" method="post" id="emailRegisterForm">
 				<table>
 					<tbody>
 						<tr>
 							<th>邮箱地址：</th>
 							<td>
 								<div class="resultBox" id="resultBox">
-									<input type="text" class="uiText" autocomplete="off" name="egoAccountOfEmail" id="egoAccountOfEmail" value="" tabindex="1"></input>
+									<input type="text" class="uiText" autocomplete="off" name="user.username" id="egoAccountOfEmail" value="" tabindex="1"></input>
 									<span class="iptTip" id="p_egoAccountOfEmail_info"></span>
 									<ul class="list hide" id="emailct"></ul>
 								</div>
@@ -98,7 +104,7 @@
 							<th>设置密码：</th>
 							<td class="setPwd">
 								<div class="spBox">
-									<input type="password" class="uiText t240" name="logonPassword" id="emailLogonPassword" maxlength="20" tabindex="2" value=""></input>
+									<input type="password" class="uiText t240" name="user.password" id="emailLogonPassword" maxlength="20" tabindex="2" value=""></input>
 									<div class="safeRank" id="emailSafeRank">
 										<ul>
 											<li>低</li>
@@ -185,8 +191,6 @@
 		</div>
 	</div>
 	<span class="clear"></span>
-
 	<div class="clear"></div>
-
 </body>
 </html>

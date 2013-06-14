@@ -124,7 +124,8 @@
 				<form method="post" action="/secure/authenticate" id="loginForm">
 					#{if flash.error}
 					<div class="msg_box msg_error">&{flash.error}</div>
-					#{/if} #{if flash.success}
+					#{/if} 
+					#{if flash.success}
 					<div class="msg_box msg_ok">&{flash.success}</div>
 					#{/if}
 					<div class="form clearfix">
