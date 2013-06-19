@@ -83,3 +83,10 @@ GET     /h_f_tjfl                               Home.floortjclass
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+#
+#%{ctx = play.configuration.getProperty('ctx', '') }%
+#GET     ${ctx}/            Application.index
+#GET     ${ctx}/hello       Application.hello
+#GET     /hello/{myName}.html     Application.sayHello
+
